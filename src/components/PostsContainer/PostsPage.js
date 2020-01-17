@@ -1,11 +1,10 @@
-import React, { useState } from "react";
-import dummyData from "../../dummy-data";
+//Complete the necessary code in this file
+import React from "react";
 import Post from "./Post";
 import "./Posts.css";
 
+// pass the data from App.js down as props then map through the data
 const PostsPage = () => {
-  // set up state for the data
-
   return (
     <div className="posts-container-wrapper">
       {/* map through data here */}
@@ -14,3 +13,4 @@ const PostsPage = () => {
 };
 
 export default PostsPage;
+
