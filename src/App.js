@@ -18,8 +18,11 @@ const[data] = useState(dummyData)
 console.log(data);
   return (
     <div className="App">
+      <SearchBar searchData={data}/>
       <PostPage postData=
       {data/* Add components here  and pass props where appropriate */} />
+
+
 
     </div>
   );
