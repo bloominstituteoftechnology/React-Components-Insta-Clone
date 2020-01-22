@@ -11,7 +11,7 @@ const[data] = useState(props.comments)
     <div>
            
       {props.comments.map(p => (
-        <Comment className="comments" key={p.imgUrl} comments={p}/>
+        <Comment comments={p}/>
       ))}
       <CommentInput />
     </div>
