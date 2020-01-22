@@ -32,15 +32,22 @@ const Post = props => {
           className="post-image"
           src={props.postData.imageUrl}
         />
-      </div>
-      <LikeSection 
+
+<div className="like-section">
+      <LikeSection className="like-section"
       likes={likes}
       incrementLikes={incrementLikes}
       />
+      </div>
+   
       <CommentSection
         postId={props.postData.imageUrl}
+     
         comments={props.postData.comments}
       />
+   <p>{props.postData.timestamp}</p>
+      </div>
+  
     </div>
   );
 };
