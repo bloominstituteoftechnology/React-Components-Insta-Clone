@@ -8,9 +8,9 @@ const PostsPage = (props) => {
   return (
     <div className="posts-container-wrapper">
       {/* map through data here */}
-      {props.newdata.map(i =>{
+      {props.newdata.map(i =>
         <Post post={i} />
-      })}
+      )}
       
     </div>
   );
