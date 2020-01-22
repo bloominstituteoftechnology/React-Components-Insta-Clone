@@ -4,11 +4,12 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #224d9c;
+  background: white;
 }
 .search-form {
   width: 150px;
   font-size: 14px;
+  box-shadow:grey;
 }
 .search-form input {
   text-align: center;

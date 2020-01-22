@@ -15,8 +15,9 @@ const dummyData = [
                 text: "Looks delicious!"
             },
             {
-                username: "martinseludo",
+                username: "fibonacciking",
                 text: "Can't wait to try it!"
+
             }
         ]
     },
