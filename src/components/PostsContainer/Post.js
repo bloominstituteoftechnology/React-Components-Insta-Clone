@@ -12,7 +12,7 @@ const Post = props => {
   const [likes, setLikes] = useState(props.dataFromParent.likes);
 
   //function increments likes when invoked
-  const incrementLike = () => {
+  const incrementLike = (likes) => {
     setLikes(likes => likes + 1);
   };
 
@@ -35,7 +35,7 @@ const Post = props => {
         likes={likes}
         />
       </div>
-      <LikeSection />
+      
       <CommentSection
         postId={props.dataFromParent.imageUrl}
         comments={props.dataFromParent.comments}

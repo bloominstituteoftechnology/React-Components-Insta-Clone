@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Oleo+Script&display=swap');
+
+.title{
+  font-family: 'Oleo Script', cursive;
+}
+
 .search-bar-wrapper {
   border-bottom: 1px solid #3333;
   height: 60px;
@@ -16,6 +22,8 @@
 }
 .image-wrapper {
   height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-image {
