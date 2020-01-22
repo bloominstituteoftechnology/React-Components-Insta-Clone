@@ -2,6 +2,8 @@
 
 .title{
   font-family: 'Oleo Script', cursive;
+  font-size: 14px;
+  
 }
 
 .search-bar-wrapper {
@@ -22,12 +24,34 @@
 }
 .image-wrapper {
   height: 50px;
+  width: 20%;
   display: flex;
   align-items: center;
+  /* padding-right: 50px; */
+  /* border-right: 2px solid black; */
+  /* justify-content: space-around; */
+  font-family: 'Oleo Script', cursive;
+  font-size: 14px;
+  /* border: 2px solid pink;
+  padding-left: 10px; */
+  padding-right: 10px;
+  
+}
+.image-wrapper p {
+  padding-left: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.image-wrapper h1{
+  padding-left: 10px;
+  font-size: 28px;
 }
 
 .logo-image {
   height: 100%;
+  
+  
 }
 
 .social-wrapper {
@@ -37,3 +61,17 @@
 .social {
   width: 50px;
 }
+i {
+  transform: scale(1.2);
+}
+.image-wrapper i{
+  transform: scale(2);
+  padding-right: 5px;
+}
+
+.comment-form input{
+  width:90%;
+  background-color: rgba(255, 255, 255,0);
+}
+
+
