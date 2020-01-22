@@ -7,7 +7,13 @@ import "./Posts.css";
 const PostsPage = (props) => {
   return (
     <div className="posts-container-wrapper">
-      {/* map through data here */}
+      {props.myData.map(item => {
+        <Post
+         key={p.imageUrl}
+         dataFromParent={p}
+         />
+
+      })}
     </div>
   );
 };
