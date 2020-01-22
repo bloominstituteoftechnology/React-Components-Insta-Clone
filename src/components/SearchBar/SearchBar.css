@@ -2,10 +2,11 @@
   border-bottom: 1px solid #3333;
   height: 60px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
   background: #ffffff;
 }
+
 .search-form {
   width: 150px;
   font-size: 14px;
@@ -15,7 +16,9 @@
   color: #262626;
 }
 .image-wrapper {
-  height: 50px;
+  height: 25px;
+  margin-top: 5px;
+  padding-left: 10px;
 }
 
 .logo-image {
@@ -28,4 +31,15 @@
 
 .social {
   width: 50px;
+}
+
+
+.logo-social {
+  width: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.input-search {
+  margin-left: -335px;
 }

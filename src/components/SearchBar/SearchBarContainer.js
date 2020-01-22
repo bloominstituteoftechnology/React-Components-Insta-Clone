@@ -5,13 +5,17 @@ import "./SearchBar.css";
 const SearchBar = () => {
   return (
     <div className="search-bar-wrapper">
-      <div className="social">
-        <i className="fab fa-instagram" /> |
- 
+      <div className="logo-social">
+        <i className="fab fa-instagram" />  |
+        <img  className="image-wrapper" src={ require('./name-logo.png') } />
+      </div>
+      <div>
+    
       </div>
      
       <form className="search-form">
         <input
+        className="input-search"
           type="text"
           placeholder="Search"
         />
