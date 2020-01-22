@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  background: #ffffff;
+  background: #224d9c;
 }
 .search-form {
   width: 150px;
@@ -12,7 +12,7 @@
 }
 .search-form input {
   text-align: center;
-  color: #262626;
+  color: black;
 }
 .image-wrapper {
   height: 50px;
