@@ -5,12 +5,23 @@ import Comment from "./Comment";
 import "./Comment.css";
 
 const CommentSection = props => {
-  // Add state for the comments
+  const [comments, setComments] = useState(props.comments);
+  const [comment, setComment] = useState("");
+
+  function changeComment(evt) {
+    setComment(evt.target.value);
+  }
+
+  function submitComment(e) {
+    e.preventDefault();
+    setComments(comments.concat([{username: 'Anonymous', text: comment}]));
+    console.log(comments);
+  }
 
   return (
     <div>
-      {/* map through the comments data and return the Comment component */}
-      <CommentInput />
+      {comments.map(comment => <Comment comment={comment}/>)}
+      <CommentInput comment={comment} changeComment={changeComment} submitComment={submitComment}/>
     </div>
   );
 };
