@@ -5,11 +5,15 @@ import "./Posts.css";
 
 // pass the data from App.js down as props then map through the data
 const PostsPage = (props) => {
+  console.log("the props", props);
   return (
     <div className="posts-container-wrapper">
       {/* map through data here */}
-      {props.data.map((item) => (
-        <Post post={item}/>
+      {props.parentData.map(el => (
+        <Post
+        key = {el.imageUrl}
+        post={el}
+      />
       ))}
     </div>
   );
@@ -17,3 +21,16 @@ const PostsPage = (props) => {
 
 export default PostsPage;
 
+// const PostsPage = props => {
+//   console.log("the props", props);
+//   return (
+//     <div className="posts-container-wrapper">
+//       {props.parentData.map(p => (
+//         <Post
+//           key={p.imageUrl}
+//           dataFromParent={p}
+//         />
+//       ))}
+//     </div>
+//   );
+// };
