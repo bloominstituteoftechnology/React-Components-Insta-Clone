@@ -8,18 +8,16 @@ import React, { useState } from "react";
 import "./App.css";
 import PostsPage from "./components/PostsContainer/PostsPage";
 import SearchBar from "./components/SearchBar/SearchBarContainer";
-import dummyData from "./dummy-data";
-
 // import the PostsPage and SearchBar and add them to the App
-import PostsContainer from "./components/PostsContainer";
-import SearchBar from "./components/SearchBar/SearchBarContainer";
+import PostsContainer from "./components/PostsContainer/PostsPage";
+import searchBar from "./components/SearchBar/SearchBarContainer";
 // import dummydata
 import dummydata from "./dummy-data";
 
 const App = () => {
-  const [data, setData] = useState(dummyData);
+  const [data, setData] = useState(dummydata);
   // set up stae for the dummy data and pass to your PostsPage
-  const [data] = useState(dummydata);
+  const [Data] = useState(dummydata);
   return (
     <div className="App">
     <SearchBar />
