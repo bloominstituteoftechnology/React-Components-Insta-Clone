@@ -8,7 +8,7 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 const Post = props => {
-  // set up stat for the likes
+  // set up stat fhe likes
   const [likes, setLikes] = useState(props.post.likes);
   const likesPost = () => {
     setLikes(likes => likes + 1);
