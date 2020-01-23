@@ -10,10 +10,7 @@ const PostsPage = (props) => {
     <div className="posts-container-wrapper">
       {props.postData.map(pData => (
         <Post
-          // key = {pData.imgUrl}
-          // userName = {pData.username}
-          // thumbnailUrl = {pData.thumbnailUrl}
-
+          key = {pData.imageUrl}
           post2 = {pData}
         />
       ))}
