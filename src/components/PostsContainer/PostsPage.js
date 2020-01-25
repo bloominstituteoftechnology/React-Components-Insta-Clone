@@ -10,14 +10,8 @@ const PostsPage = (props) => {
     <div className="posts-container-wrapper">
       <h1>Post page</h1>
       {/* map through data here */}
-            {props.data.map(item=>(<Post item={item}/>))}
-      {/* {props.data.map(item=>(<div>
-        <h2>{item.username}</h2>
-        </div>))} */}
+            {props.data.map(post=>(<Post post={post}/>))}
 
-
-      {/* {console.log('dummydata in post page', dummydata)} */}
-{/* <div>{dummydata[0].username}</div> */}
     </div>
   );
 };
