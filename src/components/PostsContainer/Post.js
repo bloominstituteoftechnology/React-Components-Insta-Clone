@@ -12,9 +12,10 @@ const Post = props => {
 
   const [addLikes, setAddLikes]=useState(props.post.likes);
 
-  // const likey= ()=>{
-  //   setAddLikes(addLikes + 1);
-  // }
+  const likey= ()=>{
+    setAddLikes(addLikes + 1);
+    console.log('addLikes + 1')
+  }
 
   {console.log('props', props.post.likes)}
   return (
@@ -32,10 +33,11 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection addLikes={addLikes}/>
+      <LikeSection addLikes={addLikes} likey={likey}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
+        
       />
     </div>
   );
