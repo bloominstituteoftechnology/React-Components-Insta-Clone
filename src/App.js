@@ -9,6 +9,7 @@ import "./App.css";
 
 // import the PostsPage and SearchBar and add them to the App
 // import dummydata
+import SearchBar from './components/SearchBar/SearchBarContainer'
 import PostsPage from './components/PostsContainer/PostsPage';
 import {dummyData} from './dummy-data';
 
@@ -28,6 +29,7 @@ const App = (props) => {
   // {console.log(console.log(mockData))}
   return (
     <div className="App">
+      <SearchBar />
       {/* Add components here  and pass props where appropriate */}
       {/* {data} */}
 {/* <button onClick={bringData}>Bring Data</button>

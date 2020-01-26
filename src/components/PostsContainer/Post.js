@@ -1,6 +1,6 @@
 // You will add code in this file
 
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
@@ -11,9 +11,14 @@ const Post = props => {
   // set up state for the likes
 
   const [addLikes, setAddLikes]=useState(props.post.likes);
+  const [double, setDouble] = useState(false);
 
   const likey= ()=>{
     setAddLikes(addLikes + 1);
+    // props.onClick();
+    setDouble(true);
+    // fetch().then(() => setDouble(false));
+    
     console.log('addLikes + 1')
   }
 
@@ -33,7 +38,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection addLikes={addLikes} likey={likey}/>
+      <LikeSection addLikes={addLikes} disabled={double} likey={likey} /*disabled={double}*//>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
