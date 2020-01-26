@@ -19,10 +19,7 @@ const CommentSection = props => {
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
-      {/* This is the part the comments are suposed to show */}
-  {/* {addComment.map((comment, index) => <Comment key={index} comment={comment}/>)} */}
   {addComment.map((comment, index) => <Comment key={index} string={'Lambda school'} comment={comment}/>)}
- {/* <Comment /> */}
     {console.log('addcomment ... >', addComment)}
     <CommentInput/>
     </div>
