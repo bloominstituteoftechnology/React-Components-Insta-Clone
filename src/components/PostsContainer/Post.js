@@ -12,11 +12,14 @@ const Post = props => {
 
   const [addLikes, setAddLikes]=useState(props.post.likes);
   const [double, setDouble] = useState(false);
+  const [buttonState, setButtonState] = useState(true)
+
 
   const likey= ()=>{
     setAddLikes(addLikes + 1);
     // props.onClick();
-    setDouble(true);
+    setButtonState(!buttonState)
+    // setDouble(true);
     // fetch().then(() => setDouble(false));
     
     console.log('addLikes + 1')
