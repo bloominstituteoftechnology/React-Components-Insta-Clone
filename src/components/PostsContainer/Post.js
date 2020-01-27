@@ -30,19 +30,6 @@ const Post = props => {
   }
 
   }
-
-  const fillColor = () => {
-
-    if (click){
-
-      setFill(fill);
-  }
- else if (click === false) {
-
-  setFill('green');
-  }
-  }
-
  
 
 
