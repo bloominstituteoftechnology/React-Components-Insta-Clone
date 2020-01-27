@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const LikeSection = props => {
+  // const [changeColor, setChangeColor] = useState(true);
+  
+
 
   console.log('likes props', props)
   return (
@@ -12,7 +15,7 @@ const LikeSection = props => {
     >
       <div className="like-section-wrapper" >
 
-          <i className="far fa-heart" onClick={props.likey} />
+          <i className="far fa-heart" style={{color: props.fill}} onClick={props.likey} />
 
       </div>
       <div className="like-section-wrapper">

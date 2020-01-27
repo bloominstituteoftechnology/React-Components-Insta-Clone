@@ -11,29 +11,39 @@ const Post = props => {
   // set up state for the likes
 
   const [addLikes, setAddLikes]=useState(props.post.likes);
-  const [buttonState, setButtonState] = useState(false);
   const [click, setClick] = useState(true);
+  const [fill, setFill] = useState(''); //passed this down the child component
   
 
 
   const likey= ()=>{
-    // setAddLikes(addLikes + 1);
-    // setButtonState(!buttonState)
 
     if (click){
       setAddLikes(addLikes + 1);
-      setClick(false)
+      setClick(false);
+      setFill('red');
   }
  else if (click === false) {
   setAddLikes(addLikes - 1);
-  setClick(true)
+  setClick(true);
+  setFill('');
   }
 
   }
 
-  const remove = () =>{
-    setAddLikes(addLikes - 1);
+  const fillColor = () => {
+
+    if (click){
+
+      setFill(fill);
   }
+ else if (click === false) {
+
+  setFill('green');
+  }
+  }
+
+ 
 
 
   {console.log('props', props.post.likes)}
@@ -52,7 +62,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection addLikes={addLikes} click ={click} likey={likey} buttonState ={buttonState} setButtonState={setButtonState} /*disabled={double}*//>
+      <LikeSection addLikes={addLikes} fill={fill} likey={likey}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
