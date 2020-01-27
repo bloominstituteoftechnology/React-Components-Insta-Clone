@@ -11,19 +11,30 @@ const Post = props => {
   // set up state for the likes
 
   const [addLikes, setAddLikes]=useState(props.post.likes);
-  const [double, setDouble] = useState(false);
-  const [buttonState, setButtonState] = useState(true)
+  const [buttonState, setButtonState] = useState(false);
+  const [click, setClick] = useState(true);
+  
 
 
   const likey= ()=>{
-    setAddLikes(addLikes + 1);
-    // props.onClick();
-    setButtonState(!buttonState)
-    // setDouble(true);
-    // fetch().then(() => setDouble(false));
-    
-    console.log('addLikes + 1')
+    // setAddLikes(addLikes + 1);
+    // setButtonState(!buttonState)
+
+    if (click){
+      setAddLikes(addLikes + 1);
+      setClick(false)
   }
+ else if (click === false) {
+  setAddLikes(addLikes - 1);
+  setClick(true)
+  }
+
+  }
+
+  const remove = () =>{
+    setAddLikes(addLikes - 1);
+  }
+
 
   {console.log('props', props.post.likes)}
   return (
@@ -41,7 +52,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection addLikes={addLikes} disabled={double} likey={likey} /*disabled={double}*//>
+      <LikeSection addLikes={addLikes} click ={click} likey={likey} buttonState ={buttonState} setButtonState={setButtonState} /*disabled={double}*//>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
