@@ -6,16 +6,28 @@
   align-items: center;
   background: #ffffff;
 }
+
 .search-form {
   width: 150px;
   font-size: 14px;
+  display: flex;
+  align-items: center;
 }
+
 .search-form input {
   text-align: center;
   color: #262626;
 }
+
+.search-form i {
+  position: absolute;
+  margin-left: 45px;
+}
+
 .image-wrapper {
   height: 50px;
+  display: flex;
+  align-items: center;
 }
 
 .logo-image {
@@ -28,4 +40,14 @@
 
 .social {
   width: 50px;
+}
+
+.image-wrapper i {
+  padding-right: 10px;
+}
+
+.image-wrapper h3 {
+  border-left: 1px solid lightgray;
+  padding-left: 10px;
+  font-family: 'Lobster', cursive;;
 }
