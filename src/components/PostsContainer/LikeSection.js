@@ -5,6 +5,9 @@ const LikeSection = props => {
     if (!props.liked) {
       props.setLikes(props.likes + 1)
       props.setLiked(true)
+    } else {
+      props.setLikes(props.likes - 1)
+      props.setLiked(false)
     }
 
   }
