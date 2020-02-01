@@ -7,23 +7,11 @@ import "./Comment.css";
 const CommentSection = props => {
   // Add state for the comments
   const [ comments, setComments ] = useState(props.comments)
-  const [ commentInput, setCommentInput ] = useState("")
-
-  const onEnterKeyDown = (e) => {
-    e.preventDefault()
-    const newComment = {
-      username: "th0mmy_g",
-      text: commentInput
-    }
-    setComments([...comments, newComment])
-  }
-
-  console.log(comments)
 
   return (
     <div>
-      {comments.map((comment, i) => <Comment key={i} comment={comment} />)}
-      <CommentInput onEnterKeyDown={onEnterKeyDown} setCommentInput={setCommentInput} />
+      {props.comments.map((comment, i) => <Comment key={i} comment={comment} />)}
+      <CommentInput comments={comments} setComments={setComments} addComment={props.addComment} id={props.id} />
     </div>
   );
 };

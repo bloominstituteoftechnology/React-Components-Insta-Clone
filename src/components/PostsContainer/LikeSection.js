@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const LikeSection = props => {
-  const likePost = () => {
+  const likePost = (id) => {
     if (!props.liked) {
-      props.setLikes(props.likes + 1)
+      props.addLike(id, props.likes + 1)
       props.setLiked(true)
     } else {
-      props.setLikes(props.likes - 1)
+      props.addLike(id, props.likes - 1)
       props.setLiked(false)
     }
 
@@ -20,7 +20,7 @@ const LikeSection = props => {
       >
         <div
           className="like-section-wrapper"
-          onClick={() => likePost()}
+          onClick={() => likePost(props.id)}
         >
           {props.liked ? <i className="fas fa-heart" style={{ color: 'red '}} /> : <i className="far fa-heart" />}
         </div>
