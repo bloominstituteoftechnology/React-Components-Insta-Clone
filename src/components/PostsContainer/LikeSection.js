@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 
 const LikeSection = props => {
   const likePost = (id) => {
-    if (!props.liked) {
-      props.addLike(id, props.likes + 1)
-      props.setLiked(true)
+    if (!props.liked.includes(id)) {
+      props.addLike(id, props.likes + 1, false)
+      props.setLiked(props.liked.concat(id))
     } else {
-      props.addLike(id, props.likes - 1)
-      props.setLiked(false)
+      props.addLike(id, props.likes - 1, true)
+      props.setLiked(props.liked.filter((likedId) => likedId !== id ))
     }
 
   }
@@ -22,7 +22,7 @@ const LikeSection = props => {
           className="like-section-wrapper"
           onClick={() => likePost(props.id)}
         >
-          {props.liked ? <i className="fas fa-heart" style={{ color: 'red '}} /> : <i className="far fa-heart" />}
+          {props.liked.includes(props.id) ? <i className="fas fa-heart" style={{ color: 'red '}} /> : <i className="far fa-heart" />}
         </div>
         <div className="like-section-wrapper">
           <i className="far fa-comment" />

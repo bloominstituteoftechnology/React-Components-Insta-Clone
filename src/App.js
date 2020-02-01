@@ -9,12 +9,13 @@ import "./App.css";
 // import the PostsPage and SearchBar and add them to the App
 // import dummydata
 import dummyData from './dummy-data';
+import dummyUserData from './dummy-user-data';
 import PostsPage from './components/PostsContainer/PostsPage';
 import SearchBar from './components/SearchBar/SearchBarContainer';
 
 
 const App = () => {
-
+  const [ userInfo, setUserInfo ] = useState(dummyUserData)
   const [ state, setState ] = useState(dummyData)
   const [ posts, setPosts ] = useState(state);
   const [ searchTerms, setSearchTerms ] = useState("");
@@ -27,10 +28,17 @@ const App = () => {
     setPosts(newState)
   }
 
-  const addLike = (id, n) => {
+  const addLike = (id, n, userLiked) => {
     const newData = state
     const likedPostIndex = newData.findIndex((post) => post.id === id)
     newData[likedPostIndex].likes = n
+    let userData = userInfo
+    if (userLiked === true) {
+      userData.likes = userData.likes.filter((likesId) => likesId !== id )
+    } else {
+      userData.likes.push(id)
+    }
+    setUserInfo(userData)
     setState(newData)
   }
 
@@ -45,7 +53,7 @@ const App = () => {
   return (
     <div className="App">
       <SearchBar setSearchTerms={setSearchTerms} searchPost={searchPost} />
-      <PostsPage posts={posts} addLike={addLike} addComment={addComment} />
+      <PostsPage posts={posts} addLike={addLike} addComment={addComment} userInfo={userInfo} />
     </div>
   );
 };
