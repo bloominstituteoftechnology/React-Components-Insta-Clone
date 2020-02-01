@@ -7,10 +7,10 @@ import "./Posts.css";
 const PostsPage = (props) => {
   return (
     <div className="posts-container-wrapper">
-      {props.data.map((Instagramposts) => {
+      {props.data.map((instagramPosts) => {
         return (
           <div>
-            <Post post={Instagramposts}/>
+            <Post post={instagramPosts}/>
           </div>
         );
       })}     
