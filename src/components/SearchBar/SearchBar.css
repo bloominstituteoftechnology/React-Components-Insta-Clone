@@ -16,6 +16,7 @@
 }
 .image-wrapper {
   height: 50px;
+  align-items: center;
 }
 
 .logo-image {

@@ -51,6 +51,17 @@
 }
 .like-number {
   width: 100px;
-  margin: 15px 0px;
+  margin: 10px 10px;
   font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+}
+
+i.far.fa-heart:hover {
+  color: red;
+}
+
+i.far.fa-comment:hover {
+  color: #2E86C1 ;
 }
