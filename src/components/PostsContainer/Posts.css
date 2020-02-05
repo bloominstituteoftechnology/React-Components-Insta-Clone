@@ -3,6 +3,7 @@
   width: 33%;
   min-width: 400px;
   margin: 5px auto;
+  background-color: rgb(170, 233, 189);
 }
 .post-header{
   display: flex;
