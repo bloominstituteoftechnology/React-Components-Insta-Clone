@@ -14,9 +14,9 @@
   text-align: center;
   color: #262626;
 }
-.image-wrapper {
+/* .image-wrapper {
   height: 50px;
-}
+} */
 
 .logo-image {
   height: 100%;
@@ -28,4 +28,10 @@
 
 .social {
   width: 50px;
+}
+
+.img {
+  width: 100px;
+  height: 40px;
+  padding-left: 40px;
 }
