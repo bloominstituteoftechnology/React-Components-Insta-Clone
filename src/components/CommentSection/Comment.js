@@ -1,3 +1,5 @@
+// You do not need to do anything in this file. Look at the CommentSection file. 
+
 import React from 'react';
 import './Comment.css';
 
