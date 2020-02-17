@@ -1,5 +1,5 @@
 // You will add code in this file
-
+// remember to import useState
 import React from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
