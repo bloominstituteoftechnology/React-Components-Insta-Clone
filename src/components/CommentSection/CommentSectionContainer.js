@@ -9,7 +9,7 @@ const CommentSection = props => {
   // Add state for the comments
  const [comments] = useState(dummyData);
 
-
+console.log("This is from CommentSectionContainer ", props)
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
