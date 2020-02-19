@@ -7,14 +7,15 @@ import dummyData from "../../dummy-data";
 
 const CommentSection = props => {
   // Add state for the comments
- const [comments] = useState(dummyData);
+ const [comments] = useState(props.comments);
 
 console.log("This is from CommentSectionContainer ", props)
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
-      {comments.map((p, index) =>(
-        <Comment key={index} propsComments={p} />
+      {comments.map((p, i) =>(
+        
+        <Comment key={i} propsComments={p} />
       ))}
       <CommentInput />
     </div>

@@ -28,10 +28,12 @@ console.log("Props on Post page ",props);
           src={props.propsPostPage.imageUrl}
         />
       </div>
-      <LikeSection likes={props[1]} />
+
+      <LikeSection  />
+
       <CommentSection
         postId={props.propsPostPage.imageUrl}
-        comments={props.comments}
+        comments={props.propsPostPage.comments}
       />
     </div>
   );
