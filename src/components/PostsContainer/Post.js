@@ -1,6 +1,6 @@
 // You will add code in this file
 import React, {useState} from "react";
-import CommentSection from "../CommentSection/CommentSectionContainer";
+import CommentSectionContainer from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
@@ -31,7 +31,7 @@ console.log("Props on Post page ",props);
 
       <LikeSection  />
 
-      <CommentSection
+      <CommentSectionContainer
         postId={props.propsPostPage.imageUrl}
         comments={props.propsPostPage.comments}
       />
