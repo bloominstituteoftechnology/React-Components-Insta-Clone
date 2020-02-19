@@ -5,18 +5,20 @@ import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
 
 import "./Posts.css";
+import CommentSection from "../CommentSection/CommentSectionContainer";
 
 
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
   const [likes, setLikes] = useState (props.post.likes);
-  
+  const [comments] = useState(props.post.comments);
+  console.log(comments);
 function addLikes(){
  setLikes( likes =>  likes + 1)
- 
+
 }
-console.log("Props on Post page ",props.post.likes);
+console.log("Props on Post page ",props);
   return (
     <div className="post-border">
       <PostHeader
@@ -34,11 +36,8 @@ console.log("Props on Post page ",props.post.likes);
       </div>
 
       <LikeSection likes={likes} addLikes={addLikes} />
-
-     {/* <CommentSectionContainer
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
-      /> */}
+      <CommentSectionContainer comments={comments}/>
+      
     </div>
   );
 };

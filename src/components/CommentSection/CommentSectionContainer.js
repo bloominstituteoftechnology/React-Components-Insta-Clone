@@ -18,9 +18,10 @@ console.log("This is from CommentSectionContainer ", props)
         <Comment key={i} comment={p.comments} />
    ))} */}
 
-     {comments.map((c, index) => { 
-      return <Comment key={index} comment={c.comments}/>
-    })}
+   
+    {comments.map((c,index) => (
+          <Comment key={index} comment={c} />
+        ))}
       <CommentInput />
     </div>
   );
