@@ -2,6 +2,7 @@
 
 import React from 'react';
 import './Comment.css';
+import './CommentInput.css';
 
 const Comment = props => {
   console.log("Comment.js ", props)

@@ -1,0 +1,9 @@
+.comment-form input{
+    width: 92%;
+    background-color: cadetblue;
+    color:white;
+}
+
+.comment-text{
+    margin: 4px;
+}

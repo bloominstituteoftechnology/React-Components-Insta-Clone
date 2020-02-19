@@ -13,10 +13,6 @@ console.log("This is from CommentSectionContainer ", props)
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
-   { /*  {comments.map((p, i) =>(
-        
-        <Comment key={i} comment={p.comments} />
-   ))} */}
 
    
     {comments.map((c,index) => (
