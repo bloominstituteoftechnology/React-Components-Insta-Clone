@@ -1,5 +1,7 @@
 # React-Components-Insta-Clone
 
+// This project was forked and worked on by Ryan Mersmann
+
 ## Composing React Components and Passing Data Via Props
 
 ### **Introduction**
