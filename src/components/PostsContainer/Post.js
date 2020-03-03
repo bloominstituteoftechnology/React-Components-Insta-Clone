@@ -1,8 +1,9 @@
 // You will add code in this file
-import React from "react";
+import React, { useState } from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
+import dummyDate from "../../dummy-data";
 
 import "./Posts.css";
 
