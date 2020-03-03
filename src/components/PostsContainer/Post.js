@@ -10,6 +10,7 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const { total, setTotal } = setTotal(0);
+  const addLike = () => setTotal(total + 1);
 
   return (
     <div className="post-border">
@@ -24,7 +25,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection buttonclick={addLike} />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}

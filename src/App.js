@@ -7,8 +7,7 @@ Look at each file to see where you need to pass props or add code
 import React, { useState } from "react";
 import "./App.css";
 // import the PostsPage and SearchBar and add them to the App
-import "./components/PostsContainer/PostsPage.js";
-import "./components/SearchBar/SearchBarContainer.js";
+import PostPage from "./components/PostsContainer/PostsPage.js";
 import SearchBar from "./components/SearchBar/SearchBarContainer.js";
 import LikeSection from "./components/PostsContainer/LikeSection";
 
@@ -21,7 +20,7 @@ const App = () => {
           <SearchBar />
         </div>
         //  <div>
-        //   <PostHeader />
+        //   <Post />
         //   </div>
       }
     </div>
