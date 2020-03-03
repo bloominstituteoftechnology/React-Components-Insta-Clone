@@ -10,14 +10,16 @@ import "./App.css";
 import "./components/PostsContainer/PostsPage.js";
 import "./components/SearchBar/SearchBarContainer.js";
 import SearchBar from "./components/SearchBar/SearchBarContainer.js";
+import LikeSection from "./components/PostsContainer/LikeSection";
 
 const App = () => {
   return (
     <div className="App">
       {
         /* Add imported components here to render them */
-
-        <SearchBar />
+        <div>
+          <SearchBar />
+        </div>
       }
     </div>
   );
