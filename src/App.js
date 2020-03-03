@@ -20,6 +20,9 @@ const App = () => {
         <div>
           <SearchBar />
         </div>
+        //  <div>
+        //   <PostHeader />
+        //   </div>
       }
     </div>
   );
