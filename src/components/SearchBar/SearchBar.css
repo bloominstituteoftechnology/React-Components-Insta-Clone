@@ -6,16 +6,15 @@
   align-items: center;
   background: #ffffff;
 }
+
 .search-form {
   width: 150px;
   font-size: 14px;
 }
+
 .search-form input {
   text-align: center;
   color: #262626;
-}
-.image-wrapper {
-  height: 50px;
 }
 
 .logo-image {
@@ -28,4 +27,10 @@
 
 .social {
   width: 50px;
+}
+
+.img {
+  width: 100px;
+  height: 40px;
+
 }
