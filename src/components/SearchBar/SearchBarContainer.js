@@ -4,7 +4,7 @@ import './SearchBar.css';
 
 const SearchBar = () => {
   return (
-    <div className='search-bar-wrapper'>
+    <div className='search-bar-container'>
       <div className='image-wrapper'>
         <i className='fab fa-instagram fa-3x' />
         <img
