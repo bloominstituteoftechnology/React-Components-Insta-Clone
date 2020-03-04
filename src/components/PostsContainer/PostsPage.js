@@ -9,16 +9,18 @@ import LikeSection from "./LikeSection";
 // import data 
 
 const PostsPage = (props) => {
-  // set up state for your data
-  const [data, updateData] = useState(dummyData)
-
+const [data, ammendData] = useState(dummyData)
   
   return (
     <div className="posts-container-wrapper">
-      {data.map()}
+    
+    {data.map((elem,i) => {
+        return <Post post = {elem} key = {i} />
+      })}
     </div>
-  );
-};
+     )
+}
+  
 
 export default PostsPage;
 
