@@ -4,7 +4,8 @@
 import React, { useState } from "react";
 
 const LikeSection = props => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(props.likes);
+  console.log("Second Look", props);
 
   return (
     <div>
@@ -16,7 +17,7 @@ const LikeSection = props => {
           <i className="far fa-comment" />
         </div>
       </div>
-      <button onClick={props.buttonClick} className="like-number">
+      <button className="like-number" onClick={props.buttonClick}>
         {count} Likes
       </button>
     </div>
