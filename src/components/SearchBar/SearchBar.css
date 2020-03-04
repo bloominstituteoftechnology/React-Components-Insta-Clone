@@ -7,17 +7,25 @@
   background: #ffffff;
 }
 .search-form {
-  width: 150px;
-  font-size: 14px;
+  width: 30%;
+  font-size: 20px;
 }
 .search-form input {
   text-align: center;
   color: #262626;
+  width: 50%;
 }
 .image-wrapper {
   height: 50px;
+  width: 20%;
+  display:flex;
+
 }
 
+.image-wrapper svg {
+  height: 100%;
+  width: 100%;
+}
 .logo-image {
   height: 100%;
 }
@@ -28,4 +36,8 @@
 
 .social {
   width: 50px;
+}
+.insta_logo {
+  height: 100%;
+  width: 100%;
 }
