@@ -3,14 +3,15 @@ import React, { useState } from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
+import dummyData from "../../dummy-data";
 
 import "./Posts.css";
 
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
-  const { total, setTotal } = setTotal(0);
-  const addLike = () => setTotal(total + 1);
+  const { Count, setCount } = useState(0);
+  const addLike = () => setCount(Count + 1);
 
   return (
     <div className="post-border">
@@ -25,7 +26,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection buttonclick={addLike} />
+      <LikeSection buttonclick={addLike} likes={Count} />
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
