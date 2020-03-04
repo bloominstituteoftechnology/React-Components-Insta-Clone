@@ -10,19 +10,10 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const [likes, setLikes] = useState(props.post.likes)
-  const addLikes = (()  => {
-    setLikes(likes + 1)
-    });
-
-  console.log('post', props.post.likes)
+  
   return (
     <div className="post-border">
-      <PostHeader
-        username={props.post.username}
-        thumbnailUrl={
-          props.post.thumbnailUrl
-        }
-      />
+      <PostHeader username={props.post.username} thumbnailUrl={props.post.thumbnailUrl} />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
@@ -30,11 +21,11 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection likes={likes} addLikes={addLikes} />
-      <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
-      />
+            <LikeSection likes={likes} addLike={() => setLikes(likes + 1)} />
+            <CommentSection
+                postId={props.post.imageUrl}
+                comments={props.post.comments}
+            />
     </div>
   );
 };
