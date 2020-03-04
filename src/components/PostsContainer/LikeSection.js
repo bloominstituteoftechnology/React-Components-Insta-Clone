@@ -5,21 +5,19 @@ import React, { useState } from "react";
 
 const LikeSection = props => {
   const [count, setCount] = useState(props.likes);
-  console.log("Second Look", props);
+  console.log("Insta", props);
 
   return (
     <div>
       <div className="like-section" key="likes-icons-container">
-        <div className="like-section-wrapper">
+        <div className="like-section-wrapper" onClick={props.addLike}>
           <i className="far fa-heart" />
         </div>
         <div className="like-section-wrapper">
           <i className="far fa-comment" />
         </div>
       </div>
-      <button className="like-number" onClick={props.buttonClick}>
-        {count} Likes
-      </button>
+      <p className="like-number">{props.likes} Likes</p>
     </div>
   );
 };
