@@ -8,6 +8,8 @@ const SearchBar = () => {
       <div className="image-wrapper">
         <i className="fab fa-instagram" />
       </div>
+      <p>|</p>
+      <h3>Instagram</h3>
       <form className="search-form">
         <input
           type="text"

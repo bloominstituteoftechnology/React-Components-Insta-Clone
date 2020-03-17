@@ -4,6 +4,8 @@
 import React from "react";
 
 const LikeSection = props => {
+  
+
   return (
     <div>
     <div
@@ -11,15 +13,15 @@ const LikeSection = props => {
       key="likes-icons-container"
     >
       <div className="like-section-wrapper">
-        <i className="far fa-heart" />
+        <button onClick = {() => {props.setCountOne(props.countOne + 1)}}><i className="far fa-heart" /></button>
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
       </div>
     </div>
     <p className="like-number">
-      
-      likes</p>
+    {props.likes} likes
+    </p>
 </div>
   )
 };
