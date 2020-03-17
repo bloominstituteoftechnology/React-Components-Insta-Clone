@@ -8,6 +8,8 @@ const Comment = props => {
     <div className="comment-text">
       <span className="user">{props.comment.username}</span>
       {' '}
+      <span className="comment">{props.comment.timestamp}</span>
+      {' '}
       <span className="comment">{props.comment.text}</span>
     </div>
   );
