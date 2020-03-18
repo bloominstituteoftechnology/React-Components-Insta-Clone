@@ -8,8 +8,12 @@ import "./Posts.css";
 
 // pass props in this file to
 const Post = props => {
-  const [likes, ] = useState(props.post.likes);
+  
   // set up state for the likes
+const [likes, setLikes ] = useState(props.post.likes);
+const increaseLikes = () => {
+  setLikes ( likes +1)
+}
 
   return (
     <div className="post-border">
@@ -26,7 +30,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection likes={likes}/>
+      <LikeSection increaselikes={increaseLikes} likes={likes}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
