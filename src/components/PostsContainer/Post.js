@@ -10,7 +10,7 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
   const [likes, setLike] = useState(props.post.likes)
-  console.log(props)
+  // console.log(props)
 
   return (
     <div className="post-border">
@@ -21,10 +21,11 @@ const Post = props => {
         }
       />
       <div className="post-image-wrapper">
-        <img onClick={()=> setLike(likes + 1)}
+        <img 
           alt="post thumbnail"
           className="post-image"
           src={props.post.imageUrl}
+          onClick={()=> setLike(likes + 1)}
         />
       </div>
       <LikeSection 

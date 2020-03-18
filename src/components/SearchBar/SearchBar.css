@@ -19,8 +19,13 @@
 }
 
 .logo-image {
-  height: 200px;
-  
+  height: 30px;
+  margin-top: 10%;
+}
+
+.far{
+  font-size: 23px;
+ 
 }
 
 

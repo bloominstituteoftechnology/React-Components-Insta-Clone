@@ -14,7 +14,7 @@ const CommentSection = props => {
       ))}
 
       <div className="timestamp">{props.timestamp}</div>
-      <CommentInput />
+      <CommentInput comment={comment} />
     </div>
   );
 };
