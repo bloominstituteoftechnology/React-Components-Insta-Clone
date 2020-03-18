@@ -4,7 +4,18 @@
 import React from "react";
 
 const LikeSection = props => {
-  
+  // let saveLikes = props.likes;
+  const likes = props.likes;
+  const setLikes = props.setLikes;
+
+  // const moreLikes = () => {
+  //   if(likes > saveLikes) {
+  //     return likes - 1;
+  //   } else {
+  //     saveLikes = props.likes -1;
+  //     return likes + 1;
+  //   }
+  // }
 
   return (
     <div>
@@ -13,17 +24,17 @@ const LikeSection = props => {
       key="likes-icons-container"
     >
       <div className="like-section-wrapper">
-        <button onClick = {() => {props.setCountOne(props.countOne + 1)}}><i className="far fa-heart" /></button>
+        <i onClick = {() => {setLikes(likes + 1)}} className="far fa-heart" />
       </div>
       <div className="like-section-wrapper">
         <i className="far fa-comment" />
       </div>
     </div>
     <p className="like-number">
-    {props.likes} likes
+    {likes} likes
     </p>
 </div>
   )
-};
+}
 
 export default LikeSection;
