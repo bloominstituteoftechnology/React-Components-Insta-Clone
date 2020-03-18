@@ -9,8 +9,8 @@ import "./Posts.css";
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
-  // const [username, setUserName] = useState()
-  
+  const [likes, setLike] = useState(props.post.likes)
+  console.log(props)
 
   return (
     <div className="post-border">
@@ -21,7 +21,7 @@ const Post = props => {
         }
       />
       <div className="post-image-wrapper">
-        <img
+        <img onClick={()=> setLike(likes + 1)}
           alt="post thumbnail"
           className="post-image"
           src={props.post.imageUrl}
@@ -31,11 +31,13 @@ const Post = props => {
       likes ={props.post.likes} 
 
       />
+      
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
+        timestamp ={props.post.timestamp}
       />
-    </div>
+      </div>
   );
 };
 

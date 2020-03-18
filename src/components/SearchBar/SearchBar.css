@@ -19,8 +19,11 @@
 }
 
 .logo-image {
-  height: 100%;
+  height: 200px;
+  
 }
+
+
 
 .social-wrapper {
   display: flex;

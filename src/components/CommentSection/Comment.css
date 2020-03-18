@@ -18,6 +18,12 @@
   border-top: 1px solid #efefef;
   color: #999;
 }
+.timestamp{
+  text-align: left;
+  margin: 1%;
+  margin-left:2.3%;
+  font-size: 0.5rem;
+}
 .user {
   font-size: 14px;
   margin-left: 5px;

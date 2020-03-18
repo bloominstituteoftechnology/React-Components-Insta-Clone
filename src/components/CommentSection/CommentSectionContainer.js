@@ -12,7 +12,8 @@ const CommentSection = props => {
       {comment.map(item => (
       <Comment key={item.username} comment={item} />
       ))}
-      
+
+      <div className="timestamp">{props.timestamp}</div>
       <CommentInput />
     </div>
   );
