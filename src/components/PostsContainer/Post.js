@@ -11,6 +11,11 @@ const Post = props => {
 	// set up state for the likes
 	const [likes, setLikes] = useState(props.dataFromParent.likes);
 
+	//function to increment likes
+	const incrementLike = () => {
+		setLikes(likes => likes + 1);
+	};
+
 	return (
 		<div className="post-border">
 			<PostHeader
