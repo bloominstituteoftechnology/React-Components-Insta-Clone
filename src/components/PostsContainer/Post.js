@@ -9,7 +9,7 @@ import './Posts.css';
 // pass props in this file to
 const Post = props => {
 	// set up state for the likes
-	const [likes, setLikes] = useState(props.dataFromParent.likes);
+	const [likes, setLikes] = useState(props.post.likes);
 
 	//function to increment likes
 	const incrementLike = () => {

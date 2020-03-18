@@ -17,9 +17,10 @@ const App = () => {
 	return (
 		<>
 			{/* Add imported components here to render them */}
-			<SearchBar />
-			<PostsPage parentData={posts} />
-			{/* <PostContainer /> */}
+			<div className="App">
+				<SearchBar />
+				<PostsPage parentData={posts} />
+			</div>
 		</>
 	);
 };
