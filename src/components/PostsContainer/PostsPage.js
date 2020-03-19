@@ -15,7 +15,6 @@ const PostsPage = props => {
 		<div className="posts-container-wrapper">
 			{/* map through data here to return a Post and pass data as props to Post */}
 			{posts.map(p => {
-				console.log(p);
 				// eslint-disable-next-line no-unused-expressions
 				return <Post key={p.imageUrl} post={p} />;
 			})}
