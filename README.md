@@ -31,6 +31,8 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. 
 Start in the App.js file and read the instructions there. 
 - [ ]  you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
+++
++
 
 ---
 

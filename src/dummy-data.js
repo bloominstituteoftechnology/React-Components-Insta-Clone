@@ -1,4 +1,4 @@
-const dummyData = [
+export const dummyData = [
     {
         username: "philzcoffee",
         thumbnailUrl: 'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-19/s150x150/67248626_346350186304601_6715901285419188224_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=knDeVfZyZmEAX_f8JX8&oh=c04ae5f2798f982b96e7cd7e141aeddd&oe=5E8242C8',
