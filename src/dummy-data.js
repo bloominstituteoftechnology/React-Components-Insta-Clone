@@ -1,7 +1,7 @@
 const dummyData = [
     {
         username: "philzcoffee",
-        thumbnailUrl: 'https://scontent-iad3-1.cdninstagram.com/v/t51.2885-19/s150x150/67248626_346350186304601_6715901285419188224_n.jpg?_nc_ht=scontent-iad3-1.cdninstagram.com&_nc_ohc=knDeVfZyZmEAX_f8JX8&oh=c04ae5f2798f982b96e7cd7e141aeddd&oe=5E8242C8',
+        thumbnailUrl: 'https://img.favpng.com/7/14/17/coffee-cup-icon-food-icon-basic-icons-icon-png-favpng-f3XBwvvxg0RnubteZpA2iCgM4.jpg',
         imageUrl: 'https://images.unsplash.com/photo-1477763858572-cda7deaa9bc5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1876&q=80',
         likes: 400,
         timestamp: "July 17th 2017",
