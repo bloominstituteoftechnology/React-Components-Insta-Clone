@@ -4,11 +4,14 @@
 import React from "react";
 
 const LikeSection = props => {
+
+
   return (
     <div>
     <div
       className="like-section"
       key="likes-icons-container"
+      onClick={() => props.setLikeCounter(props.post.LikeSection)}
     >
       <div className="like-section-wrapper">
         <i className="far fa-heart" />
@@ -19,7 +22,9 @@ const LikeSection = props => {
     </div>
     <p className="like-number">
       
-      likes</p>
+      {`likes: `}
+      
+  <span>{props.post.likeCounter}</span></p>
 </div>
   )
 };
