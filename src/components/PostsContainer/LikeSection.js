@@ -6,9 +6,7 @@ import React, { useState } from "react";
 const LikeSection = props => {
   console.log(props);
   const [likes, setLikes] = useState(props.likes);
-  const likeCounter = function(unlike) {
-    unlike +=1;
-  }
+  const likeCounter = () => setLikes(likes + 1);
  
   return (
     <div>
