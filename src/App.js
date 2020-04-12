@@ -15,9 +15,10 @@ const App = ()=> {
 
   return (
     <div className="App">
-   <PostsPage />
    <SearchBar />
-  
+   <PostsPage />
+ 
+   
       {/* Add imported components here to render them */}
     </div>
   );

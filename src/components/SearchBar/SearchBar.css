@@ -16,6 +16,10 @@
 }
 .image-wrapper {
   height: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .logo-image {
@@ -28,4 +32,15 @@
 
 .social {
   width: 50px;
+}
+
+.iconMain {
+  margin-right: 50px
+}
+
+.logoText{
+  font-family: "Grand Hotel";
+  font-size: 2rem;
+  font-weight: bold;
+  padding-left: 15px;
 }
