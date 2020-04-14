@@ -10,7 +10,7 @@ const CommentSection = props => {
 const [commentSect, setCommentSect] = useState([]);
 
 useEffect(() => {
-  dummyData.map(data => setCommentSect(data.comments));
+  dummyData.map(data => setCommentSect([data]));
 }, []);
 
 
@@ -20,13 +20,7 @@ useEffect(() => {
 
       {commentSect.map((comment, index) => {
 
-       return (<div>  <Comment 
-       
-        key={index}
-        comments={props.comment}
-        commentInput={CommentInput}
-
-       />  
+       return (<div>  <Comment />  <CommentInput />
        
        </div>
 

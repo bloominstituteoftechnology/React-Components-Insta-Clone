@@ -31,10 +31,9 @@ return (
 
 key={index}
 posts={post}
-CommentSection={CommentSection}
+
 
 />
-
 
   </div>
 

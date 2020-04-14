@@ -1,5 +1,5 @@
 // You will add code in this file
-import React, {useState} from "react";
+import React from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
 import PostHeader from "./PostHeader";
@@ -28,8 +28,7 @@ const Post = post => {
       </div>
       <LikeSection
       
-
-
+     
 
       />
       <CommentSection
