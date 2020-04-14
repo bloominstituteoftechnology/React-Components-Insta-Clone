@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div className="App">
      
-      <PostsPage /> <SearchBar />
+      <SearchBar /> <PostsPage />
     </div>
   );
 };

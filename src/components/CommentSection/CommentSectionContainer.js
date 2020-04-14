@@ -23,9 +23,10 @@ useEffect(() => {
        return (<div>  <Comment 
        
         key={index}
-        comments={comment}
+        comments={props.comment}
+        commentInput={CommentInput}
 
-       />    <CommentInput />
+       />  
        
        </div>
 

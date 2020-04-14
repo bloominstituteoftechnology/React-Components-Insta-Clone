@@ -14,7 +14,7 @@ const PostsPage = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    dummyData.map(data => setPosts(data));
+    dummyData.map(post => setPosts([post]));
   }, []);
 
   return (
