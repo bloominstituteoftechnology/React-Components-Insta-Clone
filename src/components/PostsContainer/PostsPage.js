@@ -2,6 +2,7 @@
 // import useState
 import React, {useState} from "react";
 import Post from "./Post";
+import CommentSection from "../CommentSection/CommentSectionContainer";
 import "./Posts.css";
 import dummyData from "../../dummy-data";
 

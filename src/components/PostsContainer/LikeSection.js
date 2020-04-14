@@ -11,7 +11,7 @@ const LikeSection = props => {
     <div
       className="like-section"
       key="likes-icons-container"
-      onClick={() => props.setLikeCounter(props.post.LikeSection)}
+      onClick={() => props.setLikeCounter([])}
     >
       <div className="like-section-wrapper">
         <i className="far fa-heart" />

@@ -1,8 +1,7 @@
 // You will add code in this file
-import React, {useState} from "react";
+import React from "react";
 import CommentSection from "../CommentSection/CommentSectionContainer";
 import LikeSection from "./LikeSection";
-import dummyData from "../../dummy-data";
 import PostHeader from "./PostHeader";
 import "./Posts.css";
 
@@ -10,7 +9,6 @@ import "./Posts.css";
 const Post = props => {
   // set up state for the likes
 
-  const [likeCounter, setLikeCounter] = useState(dummyData.likes);
 
   return (
     <div className="post-border">
