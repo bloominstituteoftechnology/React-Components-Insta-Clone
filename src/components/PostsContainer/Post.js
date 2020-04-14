@@ -7,10 +7,11 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 // pass props in this file to
-const Post = props => {
+// const Post = props => {
+export default function Post({ post }) {
   // set up state for the likes
-  console.log(props);
-  const [like, setLikes] = useState(props.post.likes);
+  console.log(post);
+  const [like, setLikes] = useState(post.likes);
 
   const incrementLikes = () => {
     setLikes(like => like + 1);
@@ -19,26 +20,26 @@ const Post = props => {
   return (
     <div className="post-border">
       <PostHeader
-        username={props.post.username}
+        username={post.username}
         thumbnailUrl={
-          props.post.thumbnailUrl
+          post.thumbnailUrl
         }
       />
       <div className="post-image-wrapper">
         <img
           alt="post thumbnail"
           className="post-image"
-          src={props.post.imageUrl}
+          src={post.imageUrl}
         />
       </div>
         <LikeSection incrementLikes={incrementLikes} like={like} />
         
         <CommentSection
-          postId={props.post.imageUrl}
-          comments={props.post.comments}
+          postId={post.imageUrl}
+          comments={post.comments}
         />
     </div>
   );
 };
 
-export default Post;
+// export default Post;
