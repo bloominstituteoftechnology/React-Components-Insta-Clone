@@ -7,20 +7,20 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-const [commentSect, setCommentSect] = useState([]);
+const [commentSect, setCommentSect] = useState(dummyData);
 
-useEffect(() => {
-  dummyData.map(data => setCommentSect([data]));
-}, []);
+// useEffect(() => {
+//   dummyData.map(data => setCommentSect([data]));
+// }, []);
 
 
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
 
-      {commentSect.map((comment, index) => {
+      {props.comments.map((comment, index) => {
 
-       return (<div>  <Comment />  <CommentInput />
+       return (<div>  <Comment key={index} comment={comment.text} />  <CommentInput key={index} />
        
        </div>
 

@@ -11,11 +11,11 @@ import dummyData from "../../dummy-data";
 const PostsPage = () => {
   // set up state for your data
 
-  const [posts, setPosts] = useState([]);
+  const [posts, setPosts] = useState(dummyData);
 
-  useEffect(() => {
-    dummyData.map(post => setPosts([post]));
-  }, []);
+  // useEffect(() => {
+  //   dummyData.map(post => setPosts([post]));
+  // }, []);
 
   return (
     <div className="posts-container-wrapper">
@@ -23,19 +23,13 @@ const PostsPage = () => {
  
  {posts.map((post, index) => {
 
-return (
+    return (
 
-  <div>
+ 
 
-<Post 
+<Post key={index} post={post}/>
 
-key={index}
-posts={post}
-
-
-/>
-
-  </div>
+ 
 
     
 )})

@@ -6,7 +6,7 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 // pass props in this file to
-const Post = post => {
+const Post = ({post}) => {
   // set up state for the likes
 
 
