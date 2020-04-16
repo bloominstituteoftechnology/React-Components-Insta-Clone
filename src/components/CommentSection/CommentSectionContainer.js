@@ -1,5 +1,5 @@
 // You will add code to this file
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
 import dummyData from "../../dummy-data";
