@@ -2,12 +2,11 @@
 import React, { useState } from "react";
 import CommentInput from "./CommentInput";
 import Comment from "./Comment";
-import dummyData from "../../dummy-data";
 import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-const [commentSect, setCommentSect] = useState(dummyData);
+const [commentSect, setCommentSect] = useState(props.comments);
 
 // useEffect(() => {
 //   dummyData.map(data => setCommentSect([data]));
@@ -18,17 +17,8 @@ const [commentSect, setCommentSect] = useState(dummyData);
     <div>
       {/* map through the comments data and return the Comment component */}
 
-      {props.comments.map((comment, index) => {
-
-       return (<div>  <Comment key={index} comment={comment.text} />  <CommentInput key={index} />
-       
-       </div>
-
-
-    
-      
-        )})
-    }   
+      {commentSect.map((comment, index) => <Comment key={index} comment={comment} />)}
+      <CommentInput/> 
     </div>
   );
 };
