@@ -1,5 +1,5 @@
 # React-Components-Insta-Clone
-    Text for Retro
+    Text for Retro yes
 ## Composing React Components and Passing Data Via Props
 
 ### **Introduction**
