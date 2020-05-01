@@ -6,11 +6,35 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
+  let [allComments,addComment] = useState(props.comments)
+  let [currentComment,UpdateComment] = useState('')
 
+  console.log(props.allComments)
+
+  const addComments = ()=>{
+  	let newData = allComments;
+  	newData.push({username:"ofrepose", text:"sdfgsg"})
+  	console.log(`new data is ${newData}`)
+  	addComment(newData)
+
+  }
+  console.log(typeof allComments)
+  console.log(allComments)
+
+  const getComment = () => {
+  	UpdateComment(currentComment = currentComment + CommentInput.value)
+  	
+  }
+  console.log(currentComment)
   return (
     <div>
-      {/* map through the comments data and return the Comment component */}
-      <CommentInput />
+     
+      {allComments.map(item=>{
+      	return(
+      		<Comment comment = {item} />
+      		)
+      })}
+      <CommentInput submitComment = {addComments}  />
     </div>
   );
 };
