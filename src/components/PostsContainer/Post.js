@@ -30,7 +30,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection clickHandler = {addLikes} likes ={likes}/>
+      <LikeSection clickHandler = {addLikes} likes = {likes}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
