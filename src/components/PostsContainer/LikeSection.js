@@ -4,8 +4,17 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
+import { useState } from 'react'
+
+
+
+
 
 const LikeSection = props => {
+  const [likeCount, increaseLikeCount] = useState(0);
+  const likeHandler = evnt => {
+    increaseLikeCount(likeCount + 1);
+}
   return (
     <div>
       <div
@@ -19,7 +28,7 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className="like-number">27 likes</p>
+      <p className="like-number">{likeCount}</p>
     </div>
   )
 };
