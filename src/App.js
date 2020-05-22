@@ -15,6 +15,8 @@ const App = () => {
 
   return (
     <div className="App">
+      <SearchBar />
+
       {/* Add imported components here to render them */}
     </div>
   );
