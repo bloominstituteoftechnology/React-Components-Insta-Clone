@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
 .comment-text {
   text-align: left;
   padding: 2px;
@@ -23,4 +25,10 @@
   margin-left: 5px;
   color: black;
   font-weight: bold;
+}
+.time{
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 5px;
 }
