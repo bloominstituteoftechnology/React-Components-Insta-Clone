@@ -7,12 +7,12 @@ import dummyData from '../../dummy-data';
 // import data 
 
 const PostsPage = () => {
-  const [data, setData] = useState(dummyData[0])
+  const [data, setData] = useState(dummyData)
   // set up state for your data
   return (
     <div className="posts-container-wrapper">
-      {dummyData.map((obj, index) => {
-        return <Post key={index} post={obj} />
+      {data.map(obj => {
+        return <Post key={obj.username} post={obj} />
       })
       }
     </div>
