@@ -3,6 +3,7 @@
   width: 33%;
   min-width: 400px;
   margin: 5px auto;
+  background-image: repeating-radial-gradient(cadetblue, lavender, pink);
 }
 .post-header{
   display: flex;
