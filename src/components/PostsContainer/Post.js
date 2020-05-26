@@ -9,7 +9,7 @@ import dummyData from "../../dummy-data";
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
-  const [likesCounter, setLikesCounter] = useState(0);
+  const [likesCounter, setLikesCounter] = useState(props.post.likes);
   return (
     <div className="post-border">
       <PostHeader
@@ -25,7 +25,7 @@ const Post = props => {
           src={props.post.imageUrl}
         />
       </div>
-      <LikeSection />
+      <LikeSection likesCounter={likesCounter} setLikesCounter={setLikesCounter}/>
       <CommentSection
         postId={props.post.imageUrl}
         comments={props.post.comments}
