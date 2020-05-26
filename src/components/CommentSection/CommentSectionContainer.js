@@ -6,7 +6,7 @@ import "./Comment.css";
 
 const CommentSection = props => {
   // Add state for the comments
-  const [comment,setComment] = useState()
+  const comment = props.comments
 
   return (
     <div>
