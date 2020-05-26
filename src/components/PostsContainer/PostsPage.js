@@ -8,12 +8,12 @@ import dummyData from "./dummy-data"
 
 const PostsPage = () => {
   // set up state for your data
-  const [ postData, setPostData ] = useState("");
+  const [ postData, setPostData ] = useState(dummyData);
   return (
     <div className="posts-container-wrapper">
       {/* map through data here to return a Post and pass data as props to Post */}
-{dummyData.map((post)=> <Post username={post[0].username}  thumbnailUrl={post[0].thumbnailUrl}  src={post[0].imageUrl} likes={post[0].likes}      postId={post[0].imageUrl}
-comments={post[0].comments} /> )}      
+{postData.map((post)=> <Post username={post.username}  thumbnailUrl={post.thumbnailUrl}  src={post.imageUrl} likes={post.likes}      postId={post.imageUrl}
+comments={post.comments} /> )}      
     </div>
   );
 };
