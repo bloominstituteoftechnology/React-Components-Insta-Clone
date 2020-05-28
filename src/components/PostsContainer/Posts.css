@@ -4,7 +4,7 @@
   min-width: 400px;
   margin: 5px auto;
 }
-.post-header{
+.post-header {
   display: flex;
   align-items: center;
 }
@@ -42,6 +42,15 @@
 .like-section {
   display: flex;
   justify-content: flex-start;
+}
+
+.svg-inline--fa {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.svg-inline--fa path {
+  padding-right: 30px;
 }
 
 .like-section-wrapper {
