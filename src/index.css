@@ -4,3 +4,7 @@ body {
   font-family: sans-serif;
   background: #fafafa;
 }
+.svg-inline--fa {
+  height: auto;
+  padding-right: 10px;
+}
