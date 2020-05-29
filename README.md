@@ -14,18 +14,18 @@
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ]  Create a forked copy of this project.
-- [ ]  Add your team lead as collaborator on Github.
-- [ ]  Clone your OWN version of the repository in your terminal
-- [ ]  CD into the project base directory `cd React-Components-Insta-Clone`
-- [ ]  Download project dependencies by running one of these two commands `yarn` or `npm install`
-- [ ]  Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
-- [ ]  Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ]  Push commits: git push origin `<firstName-lastName>`.
+- [x]  Create a forked copy of this project.
+- [ ]  Add your team lead as collaborator on Github. 
+- [x]  Clone your OWN version of the repository in your terminal
+- [x]  CD into the project base directory `cd React-Components-Insta-Clone`
+- [x]  Download project dependencies by running one of these two commands `yarn` or `npm install`
+- [x]  Using the same command tool (yarn or npm) start up the app using `yarn start` or `npm start`
+- [x]  Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+- [x]  Push commits: git push origin `<firstName-lastName>`.
 
 ### **Tasks**
 
-- [ ]  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
+- []  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
 - [ ]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
 - [ ]  Use what you learned yesterday to add and update state for the likes so that when you click on the heart icon it updates the number of likes.
 - [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. 
