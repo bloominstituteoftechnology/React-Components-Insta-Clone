@@ -24,7 +24,6 @@
 .search-form input {
   text-align: center;
   color: #262626;
-  background-image: url("../SearchBar/searchIcon.png");
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 45px -2px;

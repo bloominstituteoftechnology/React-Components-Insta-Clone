@@ -1,26 +1,30 @@
+.CommentSection {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .comment-text {
   text-align: left;
   padding: 2px;
-  margin-left: 4px;
 }
 .comment {
-  font-size: 16px;
+  font-size: 12px;
 }
 .comment-form  {
   margin: 10px 0;
   width: 100%;
 }
 .comment-form input {
-  width: 100%;
-  font-size: 14px;
-  padding: 10px;
+  width: 98%;
+  font-size: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border: none;
   border-top: 1px solid #efefef;
   color: #999;
 }
 .user {
-  font-size: 14px;
-  margin-left: 5px;
+  font-size: 12px;
   color: black;
   font-weight: bold;
 }
