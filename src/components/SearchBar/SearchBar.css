@@ -7,12 +7,23 @@
   background: #ffffff;
 }
 .search-form {
-  width: 150px;
+  width: 172px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
 }
 .search-form input {
   text-align: center;
   color: #262626;
+  background-color: #fcfcfc;
+  border: 1px solid #d8d8d8;
+  padding: 3%;
+  width: 100%;
+  border-radius: 3px;
+}
+
+::placeholder {
+  color: #9c9c9c;
 }
 
 .logo-image {
