@@ -12,12 +12,13 @@ import PostsPage from "./components/PostsContainer/PostsPage";
 // import the PostsPage and SearchBar and add them to the App
 
 
-const App = (props) => {
-
+const App = () => {
   return (
     <div className="App">
-      <SearchBar />
-      <PostsPage />
+      <>
+        <SearchBar />
+        <PostsPage />
+      </>
     </div>
   );
 };
