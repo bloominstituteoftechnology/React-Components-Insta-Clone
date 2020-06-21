@@ -7,9 +7,23 @@ import "./Posts.css";
 
 const PostsPage = () => {
   // set up state for your data
+  const [postsData, setPostsData] = React.useState(null);
+  const [commentSectionData, setCommentSectionData] = React.useState(null)
+
   return (
     <div className="posts-container-wrapper">
-      {/* map through data here to return a Post and pass data as props to Post */}
+      { data.map(post => {
+          <Post 
+            postsData={postsData} 
+            setPostsData={setPostsData} 
+          />
+          <CommentSection 
+              commentSectionData={commentSectionData} 
+              setCommentSectionData={setCommentSectionData} 
+          />
+        }
+      )
+    }
     </div>
   );
 };
