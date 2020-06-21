@@ -13,7 +13,7 @@
 ### **Project Setup**
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
-
+<!-- 
 - [ ]  Create a forked copy of this project.
 - [ ]  Add your team lead as collaborator on Github.
 - [ ]  Clone your OWN version of the repository in your terminal
@@ -21,7 +21,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ]  Download project dependencies by running `npm install`
 - [ ]  Start up the app using `npm start`
 - [ ]  Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-- [ ]  Push commits: git push origin `<firstName-lastName>`.
+- [ ]  Push commits: git push origin `<firstName-lastName>`. -->
 
 ### **Tasks**
 
