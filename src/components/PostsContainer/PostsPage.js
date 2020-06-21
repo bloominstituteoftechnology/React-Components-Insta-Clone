@@ -13,7 +13,8 @@ const PostsPage = () => {
   return (
     <div className="posts-container-wrapper">
       { data.map(post => {
-          <Post 
+        return (
+          <div><Post 
             postsData={postsData} 
             setPostsData={setPostsData} 
           />
@@ -21,7 +22,9 @@ const PostsPage = () => {
               commentSectionData={commentSectionData} 
               setCommentSectionData={setCommentSectionData} 
           />
-        }
+          </div>
+        )
+      }
       )
     }
     </div>
