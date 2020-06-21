@@ -13,7 +13,9 @@ import PostsPage from './components/PostsContainer/PostsPage';
 const App = () => {
 
   return (
-    <div className="App">      
+    <div className="App">
+      <SearchBar />
+      <PostsPage />      
     </div>
   );
 };
