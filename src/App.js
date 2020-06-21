@@ -16,7 +16,7 @@ const App = () => {
   
   return (
     <div className="App">
-      <SearchBar searchBarData={searchBarData} setSearchBarData={searchBarData} />
+      <SearchBar searchBarData={searchBarData} setSearchBarData={setSearchBarData} />
       <PostsPage postsData={postsData} setPostsData={setPostsData} />      
     </div>
   );
