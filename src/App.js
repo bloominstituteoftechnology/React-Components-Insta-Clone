@@ -11,13 +11,11 @@ import PostsPage from './components/PostsContainer/PostsPage';
 
 
 const App = () => {
-  const [searchBarData, setSearchBarData] = React.useState(null);
-  const [postsData, setPostsData] = React.useState(null);
   
   return (
     <div className="App">
-      <SearchBar searchBarData={searchBarData} setSearchBarData={setSearchBarData} />
-      <PostsPage postsData={postsData} setPostsData={setPostsData} />      
+      <SearchBar />
+      <PostsPage />      
     </div>
   );
 };
