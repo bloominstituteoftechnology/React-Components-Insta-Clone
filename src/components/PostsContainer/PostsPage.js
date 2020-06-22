@@ -10,14 +10,13 @@ import DummyData from '../../dummy-data';
 const PostsPage = () => {
   // set up state for your data
   const data = DummyData;
-  
+  console.log('data in PostsPage = ', data)
   return (
     <div className="posts-container-wrapper">
       { data.map(post => {
         return (
           <div>
-            <Post post={data} />
-            <CommentSection data={data}/>
+            <Post post={post} />
           </div>
         )
       }
