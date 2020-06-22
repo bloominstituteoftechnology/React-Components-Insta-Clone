@@ -9,8 +9,8 @@ import "./Posts.css";
 // pass props in this file to
 const Post = props => {
   // set up state for the likes
-  const {likes, setLikes} = React.useState(props.likes, props.setLikes);
-
+  console.log('Post props: ', props)
+  const [likes, setLikes] = React.useState(props.post.likes)
   return (
     <div className="post-border">
       <PostHeader
