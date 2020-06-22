@@ -17,6 +17,7 @@ const LikeSection = props => {
         </div>
         <div className="like-section-wrapper">
           <FontAwesomeIcon icon={faComment} />
+        console.log(props)
         </div>
       </div>
       <p className="like-number">27 likes</p>
