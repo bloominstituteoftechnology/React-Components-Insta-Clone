@@ -9,7 +9,10 @@ const CommentSection = props => {
   console.log('CommentSection props: ', props)
   const {postId, comments} = props;
   const [comment, setComment] = useState([comments])
-
+  const submitComment = (e) => {
+    e.preventDefault();
+    setComment({...comment, [e.target.name]: e.target.value})
+  }
   return (
     <div>
       {/* map through the comments data and return the Comment component */}
@@ -22,7 +25,7 @@ const CommentSection = props => {
           )
       })
     }
-      <CommentInput props={comments} setComment={setComment} comment={comment} />
+      <CommentInput submitComment={submitComment} setComment={setComment} comment={comment} />
     </div>
   );
 };
