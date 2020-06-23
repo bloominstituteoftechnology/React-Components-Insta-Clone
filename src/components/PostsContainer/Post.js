@@ -13,6 +13,7 @@ const Post = props => {
   const [likes, setLikes] = useState(props.post.likes);
   const heartUp = () =>{
     setLikes(likes+1)
+    console.log(likes)
   }
   return (
     <div className="post-border">
