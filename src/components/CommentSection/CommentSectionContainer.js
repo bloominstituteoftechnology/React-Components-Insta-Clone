@@ -6,7 +6,7 @@ import "./Comment.css";
 import dummyData from "../../dummy-data"
 const CommentSection = props => {
   // Add state for the comments
-  const [comments] = useState(dummyData)
+  const [comments, setComments] = useState(dummyData);
 
   return (
     <div>

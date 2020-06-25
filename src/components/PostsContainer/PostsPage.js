@@ -12,7 +12,7 @@ const PostsPage = () => {
   return (
     <div className="posts-container-wrapper">
       {data.map(p => (
-        <Post post={p} />
+        <Post key={p.id} post={p} />
       ))}
     </div>
   );
