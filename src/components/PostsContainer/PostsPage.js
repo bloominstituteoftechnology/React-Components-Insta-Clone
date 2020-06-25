@@ -1,18 +1,18 @@
 //Complete the necessary code in this file
 // import useState
-import { useState } from "react";
-import React from "react";
+import React, { useState } from "react";
 import Post from "./Post";
 import "./Posts.css";
-import dummydata from "../../dummy-data";
+import dummyData from "../../dummy-data";
 
 const PostsPage = () => {
-  const [data, setData] = useState(dummydata);
-  console.log(data)
+  const [data, setData] = useState(dummyData);
   return (
     <div className="posts-container-wrapper">
+
       {data.map(p => (
         <Post key={p.id} post={p} />
+
       ))}
     </div>
   );
