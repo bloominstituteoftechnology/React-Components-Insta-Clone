@@ -2,15 +2,15 @@
 
 ## Composing React Components and Passing Data Via Props
 
-### **Introduction**
+## Introduction
 
 - For this project, you'll be building a simple Instagram clone using React.
 - There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
 - Your React application will receive faux post data and render each as a separate Instagram post.
 
-### **Objectives**
+## Instructions 
 
-### **Project Setup**
+### Task 1: Project Setup
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
@@ -23,7 +23,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ]  Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [ ]  Push commits: git push origin `<firstName-lastName>`.
 
-### **Tasks**
+### Task 2a: MVP
 
 - [ ]  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
 - [ ]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
@@ -42,12 +42,21 @@ Your search bar header should look something like this:
 Your posts should look something like this:
 ![insta post](/assets/ig_post.png)
 
+### Task 2b: Exit Ticket
 
-### Stretch Goals
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/tk2kpwyLDYBJkCG6n/A8TyNmvCG9JaJn).
+
+The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
+
+
+### Task 3: Stretch Goals
 
 - [ ]  Create more dummy data in the dummy-data.js file and add search functionality to the search bar. One way to do this is with a filter method.
 - [ ]  Implement the ability to comment on a post with the `Add a comment...` input.
 - [ ]  Finish styling all of the application and get your instagram clone to closely resemble the given design spec.
 
 
+## Submission Format
 
+* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
+* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
