@@ -7,29 +7,20 @@ import PostHeader from "./PostHeader";
 import "./Posts.css";
 
 // pass props in this file to
-const Post = props => {
+const Post = (props) => {
   // set up state for the likes
-
+  const [likes, setLikes] = React.useState(props.post.likes)
+  // props is philzcoffee || twitch object, not entire data
+  const { username, thumbnailUrl, imageUrl, comments } = props.post;
+  console.log("Post props: ", props);
   return (
     <div className="post-border">
-      <PostHeader
-        username={props.post.username}
-        thumbnailUrl={
-          props.post.thumbnailUrl
-        }
-      />
+      <PostHeader username={username} thumbnailUrl={thumbnailUrl} />
       <div className="post-image-wrapper">
-        <img
-          alt="post thumbnail"
-          className="post-image"
-          src={props.post.imageUrl}
-        />
+        <img alt="post thumbnail" className="post-image" src={imageUrl} />
       </div>
-      <LikeSection />
-      <CommentSection
-        postId={props.post.imageUrl}
-        comments={props.post.comments}
-      />
+      <LikeSection likes={likes} setLikes={setLikes} />
+      <CommentSection postId={imageUrl} comments={comments} />
     </div>
   );
 };
