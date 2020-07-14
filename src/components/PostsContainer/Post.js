@@ -12,17 +12,10 @@ const Post = (props) => {
 
   // set up state for the likes
   const [likes, setLikes] = useState(props.post.likes);
-  const [updated, setUpdated] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
-    if (updated === false) {
-      setLikes(likes + 1);
-      setUpdated(true);
-    } else {
-      setLikes(likes - 1);
-      setUpdated(false);
-    }
+    setLikes(likes + 1);
   };
 
   return (
