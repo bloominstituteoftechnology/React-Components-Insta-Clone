@@ -8,7 +8,7 @@
 - There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
 - Your React application will receive faux post data and render each as a separate Instagram post.
 
-## Instructions 
+## Instructions
 
 ### Task 1: Project Setup
 
@@ -26,21 +26,14 @@ This project was put together using create-react-app (CRA). You will not need to
 ### Task 2a: MVP
 
 - [ ]  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
-- [ ]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
-- [ ]  Use what you learned yesterday to add and update state for the likes so that when you click on the heart icon it updates the number of likes.
-- [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. 
-Start in the App.js file and read the instructions there. 
-- [ ]  you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
+- [ ]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Posts container that renders an individual Post for every object inside the `dummy-data.js` array.
+- [ ]  Use what you learned yesterday to add and update state for the posts.
+- [ ]  You will implement a callback to increase the "likes" count on posts, and hand it down through props into deeply nested components.
+- [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. Start in the App.js file and read the instructions there.
 
 ---
 
-Your search bar header should look something like this:
-![search bar](/assets/ig_search_bar.png)
-
----
-
-Your posts should look something like this:
-![insta post](/assets/ig_post.png)
+Your project should end up looking like [this](https://tk-assets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
 
 ### Task 2b: Exit Ticket
 
@@ -48,15 +41,13 @@ Once you begin, you will have 15 minutes to answer the questions [here](https://
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
-
 ### Task 3: Stretch Goals
 
 - [ ]  Create more dummy data in the dummy-data.js file and add search functionality to the search bar. One way to do this is with a filter method.
-- [ ]  Implement the ability to comment on a post with the `Add a comment...` input.
+- [ ]  Implement the ability to add comments to a post using an input.
 - [ ]  Finish styling all of the application and get your instagram clone to closely resemble the given design spec.
-
 
 ## Submission Format
 
-* [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-* [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your PR
+- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+- [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your TL
