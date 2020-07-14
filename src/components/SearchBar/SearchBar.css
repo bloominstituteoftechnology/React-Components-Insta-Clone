@@ -14,15 +14,12 @@
   text-align: center;
   color: #262626;
 }
-
 .logo-image {
   height: 100%;
 }
-
 .social-wrapper {
   display: flex;
 }
-
 .social {
   width: 50px;
 }

@@ -21,15 +21,12 @@
   height: 100%;
   width: 100%;
 }
-
 .post-image {
   width: 100%;
 }
-
 .post-header {
   display: flex;
 }
-
 .post-thumb-wrapper {
   height: 50px;
   width: 50px;
@@ -43,7 +40,6 @@
   display: flex;
   justify-content: flex-start;
 }
-
 .like-section-wrapper {
   height: 10px;
   width: 10px;
