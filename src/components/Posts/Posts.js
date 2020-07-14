@@ -3,6 +3,8 @@ import Post from "./Post";
 import "./Posts.css";
 
 const Posts = (props) => {
+  // // Testing Below! 
+  // console.log(props);
   // Make sure the parent of Posts is passing the right props!
   const { likePost, posts } = props;
 
@@ -10,6 +12,11 @@ const Posts = (props) => {
     <div className="posts-container-wrapper">
       {/* map through the posts here to return a Post component */}
       {/* Check the implementation of Post to see what props it requires! */}
+      {
+        posts.map((activePost)=>{
+          return <Post key={activePost.id} post={activePost} />
+        })
+      }
     </div>
   );
 };
