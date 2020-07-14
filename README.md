@@ -25,12 +25,12 @@ This project was put together using create-react-app (CRA). You will not need to
 
 ### **Tasks**
 
-- [ ]  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
-- [ ]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
-- [ ]  Use what you learned yesterday to add and update state for the likes so that when you click on the heart icon it updates the number of likes.
-- [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. 
+- [x]  This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
+- [x]  To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Post Container and a Comment Section for every piece of mock data in the `dummy-data.js` file.
+- [x]  Use what you learned yesterday to add and update state for the likes so that when you click on the heart icon it updates the number of likes.
+- [x]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. 
 Start in the App.js file and read the instructions there. 
-- [ ]  you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
+- [x]  you'll want to add your own styles via CSS. To keep things organized, have the CSS file that corresponds with a component live in the same directory as the component file.
 
 ---
 
