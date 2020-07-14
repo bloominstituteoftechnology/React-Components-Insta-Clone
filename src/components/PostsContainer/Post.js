@@ -8,14 +8,21 @@ import "./Posts.css";
 
 // pass props in this file to
 const Post = (props) => {
-  // console.log("Post here: ", props);
+  console.log("Post here: ", props);
 
   // set up state for the likes
   const [likes, setLikes] = useState(props.post.likes);
+  const [updated, setUpdated] = useState(false);
 
   const handleClick = (e) => {
     e.preventDefault();
-    console.log("Clicked!");
+    if (updated === false) {
+      setLikes(likes + 1);
+      setUpdated(true);
+    } else {
+      setLikes(likes - 1);
+      setUpdated(false);
+    }
   };
 
   return (
