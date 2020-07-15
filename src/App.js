@@ -20,6 +20,7 @@ const App = () => {
   const [search, setSearch] = useState('') // < in this case the useState hook function takes a string, what the user would type
   
   const likePost = postId => {
+    console.log(likePost)
     // This function is passed into nested components using props, to allow them to update application state.
     // It takes a post id as its only argument. The idea is to increase the 'likes' count of the post with the given `id`.
     // We will update the posts slice of state using `setPosts`, passing as the new state the invocation of `posts.map()`.
@@ -28,7 +29,7 @@ const App = () => {
     //  - otherwise just return the post object unchanged.
     setPosts(posts.map(activePost => {
       if(activePost.id === postId) {
-        return {...activePost, likes: activePost.likes +1};
+        return {...activePost, likes: activePost.likes + 1};
       } 
       return activePost;
     }))
