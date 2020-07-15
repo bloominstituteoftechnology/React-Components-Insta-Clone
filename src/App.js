@@ -18,6 +18,7 @@ const App = () => {
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
   const [post, setPost] = useState(data)
   const [search, setSearch] = useState()
+  console.log(data)
 
   const likePost = postId => {
     // This function is passed into nested components using props, to allow them to update application state.
@@ -39,7 +40,7 @@ const App = () => {
     <div className="App">
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar />
-      <Posts />
+      <Posts posts={post} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
