@@ -1,12 +1,11 @@
-// You will add code to this file
 import React from 'react';
 import Comments from '../Comments/Comments';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
 
 const Post = props => {
-  // Make sure the parent of Post is passing the right props!
-  const { post, likePost } = props
+  // 🔥 Make sure the parent of Post is passing the right props!
+  const { post, likePost } = props;
 
   return (
     <div className='post-border'>
@@ -21,7 +20,7 @@ const Post = props => {
           src={post.imageUrl}
         />
       </div>
-      {/* LikeSection is missing a prop it needs to function! */}
+      {/* Is LikeSection getting all the props it needs to work correctly? */}
       <LikeSection likePost={() => likePost(post.id)} />
       {/* Comments also wants its props! */}
       <Comments />
