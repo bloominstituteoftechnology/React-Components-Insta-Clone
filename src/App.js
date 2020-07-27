@@ -7,8 +7,8 @@
 // Import the state hook
 import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-import Posts from '../src/components/Posts/Posts'
-import SearchBar from '../src/components/SearchBar/SearchBar'
+import Posts from './components/Posts/Posts'
+import SearchBar from './components/SearchBar/SearchBar'
 // Import the dummyData
 import dummyData from "./dummy-data"
 import './App.css';
@@ -31,19 +31,29 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    setPosts(posts.map(igPost =>{
-      if(igPost.id === postId)
-      igPost.like = igPost.likes +1
-      return igPost
+    setPosts(posts.map(myPost =>{
+      if(myPost.id === postId)
+      myPost.likes = myPost.likes+1;
+      myPost.dislike = myPost.dislike-1;
+      return myPost;
     }))
-  };
 
+    // const dislikePost = dpostId =>{
+    //   setPosts(posts.map(myPost =>{
+    //     if(myPost.id === dpostId)
+    //     myPost.dislike = myPost.dislike-1;
+    //     return myPost;
+    //   }))
+
+    // }
+  };
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      <SearchBar/>
+      <SearchBar searchBar ={searchBar} setSearchBar = {setSearchBar}/>
       <Posts posts ={posts} likePost ={likePost}/>
+      {/* <Posts posts ={posts} dislikePost={dislikePost}/> */}
     </div>
   );
 };
