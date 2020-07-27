@@ -26,6 +26,7 @@ const App = () => {
       console.log(updatedLikes)
       return updatedLikes;
     })
+    likePost(postId);
     setPosts(updatedLikes);
     // const postsMapped = posts.map(element => {
     //   postId === posts.id ? console.log(likePost + 1) : console.log(likePost);
@@ -47,8 +48,9 @@ const App = () => {
 
 
   return (
-    <div className='App'>ughhhhhh
-      {SearchBar, Posts}
+    <div className='App'>
+      {/* Add SearchBar and Posts here to render them */}
+      <Posts key={} post={} likePost={}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
