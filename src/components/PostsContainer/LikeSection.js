@@ -5,7 +5,7 @@ import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
 
-const LikeSection = props => {
+const LikeSection = props => { 
 
   const handleOnClick = event => {
     props.setLikes(props.likes + 1)
