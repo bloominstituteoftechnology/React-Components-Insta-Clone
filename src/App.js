@@ -1,4 +1,5 @@
-/* 
+/* I don't understand '...', sending functions with params as props, and I don't understand 'key'. State is always declared in the App.js, but does it travel via function as props?
+
   Start here and work your way down the nested components.
   Not all files in the project need code added.
   Look at each file to see what props need to be passed!
@@ -46,7 +47,7 @@ const App = () => {
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
-      <Posts posts={posts} likePost={likePost()}/>
+      <Posts key= {posts.id} posts={posts} likePost={likePost()}/>
       <SearchBar />
       {/* <PostHeader username={posts.username} thumbnailUrl ={thumbnailUrl}/> */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
