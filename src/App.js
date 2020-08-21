@@ -15,7 +15,7 @@ import Posts from './components/Posts/Posts';
 
 const App = () => {
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
-  const [data] = useState(postData);
+  const [data, setPosts] = useState(postData);
   // const [likes, setLikes] = useState(data.likes);
   // console.log(likes);
   console.log(data);
@@ -35,9 +35,14 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     // setLikes(data[postId].likes + 1);
-    data[postId].likes += 1;
-    console.log(postId);
-    console.log(data[postId - 1].likes);
+    setPosts(data.map((obj) => {
+      if (obj.id === postId) {
+        return {...obj, likes: obj.likes + 1}
+      } else {
+        return obj;
+      }
+    }))
+
   };
 
   return (
