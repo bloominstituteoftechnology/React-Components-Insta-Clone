@@ -34,7 +34,10 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    // pos
+    // setLikes(data[postId].likes + 1);
+    data[postId].likes += 1;
+    console.log(postId);
+    console.log(data[postId - 1].likes);
   };
 
   return (
@@ -42,7 +45,7 @@ const App = () => {
       {
       <> 
       <SearchBar />
-      <Posts postData={data}/>
+      <Posts likePost={likePost} postData={data}/>
       </>
       }
       {/* Check the implementation of each component, to see what props they require, if any! */}
