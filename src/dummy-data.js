@@ -1,26 +1,29 @@
+import React from 'react';
+import kenz from './assets/kenz.png';
+
 const dummyData = [
     {
         id: 1,
-        username: "kenzcoffee",
-        thumbnailUrl: 'https://static.wixstatic.com/media/75b891_adcb6f76db454244ae9c788b79609919~mv2_d_1225_1225_s_2.png/v1/fit/w_2500,h_1330,al_c/75b891_adcb6f76db454244ae9c788b79609919~mv2_d_1225_1225_s_2.png',
-        imageUrl: 'https://static.wixstatic.com/media/75b891_79a7b1cddd7e480ea3f5a109bda23ca0~mv2.png/v1/fill/w_480,h_388,al_c,q_90,usm_0.66_1.00_0.01/75b891_79a7b1cddd7e480ea3f5a109bda23ca0~mv2.webp',
-        likes: 9000,
+        username: "kenzcoffeeroasters",
+        thumbnailUrl: kenz,
+        imageUrl: 'https://i.pinimg.com/originals/19/6b/0c/196b0c16e3fd1fdd6ef110c51f254d59.jpg',
+        likes: 900,
         timestamp: "July 17th 2017, 12:42:40 pm",
         comments: [
             {
                 id: 22,
                 username: "philzcoffee",
-                text: "We've got more than just coffees!",
+                text: "We've got more than Kenz Coffee Roasters come to Philz!",
             },
             {
                 id: 23,
                 username: "biancasaurus",
-                text: "Looks delicious!",
+                text: "Hate Kenz!",
             },
             {
                 id: 24,
                 username: "martinseludo",
-                text: "Can't wait to try it!",
+                text: "Philz is the best!",
             },
         ],
     },
