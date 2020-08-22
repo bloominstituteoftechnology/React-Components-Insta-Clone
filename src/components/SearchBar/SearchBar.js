@@ -6,6 +6,13 @@ import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icon
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
+
+  const {setSearchTerms, searchPost} = props;
+  const onEnterKeyDown = (e) => {
+    e.preventDefault()
+    e.key === 'Enter' && searchPost()
+  }
+
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -15,6 +22,8 @@ const SearchBar = (props) => {
         <input
           type="text"
           placeholder="Search"
+          onChange={(e)=> setSearchTerms(e.target.value)}
+          onKeyDown={(e) => {e.key === 'Enter' && onEnterKeyDown(e)}}
         />
       </form>
       <div className="social-wrapper">
