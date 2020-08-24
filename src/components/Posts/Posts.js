@@ -1,7 +1,6 @@
 import React from 'react';
 import Post from './Post';
 import './Posts.css';
-import App, {posts} from "/Users/cassandravillarreal/Desktop/Lambda-Work/Unit2-pt20/React-Components-Insta-Clone/public/App"
 
 
 const Posts = (props) => {
@@ -12,7 +11,7 @@ const Posts = (props) => {
   return (
     <div className='posts-container-wrapper'>
       {/* Map through the posts array returning a Post component at each iteration */}
-      <Post key={posts.id}/>
+      {/* <Post key={posts.id}/> */}
       {/* Check the implementation of Post to see what props it requires! */}
     </div>
   );
