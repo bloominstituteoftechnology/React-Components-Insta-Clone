@@ -1,13 +1,14 @@
 //Complete the necessary code in this file
 // import useState
-import React from "react";
+
 import React, { useState } from "react";
 import Post from "./Post";
 import "./Posts.css";
 // import data 
 import dummyData from "../../dummy-data"
 const PostsPage = () => {
-  const [state] =useState(dummyData)
+  const [state] = useState(dummyData)
+  const [data, setData] = useState(dummyData)
   console.log(state)
   return (
     <div className="posts-container-wrapper">
