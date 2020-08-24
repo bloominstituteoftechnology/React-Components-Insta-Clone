@@ -37,7 +37,7 @@ Your project should end up looking like [this](https://tk-assets.lambdaschool.co
 
 ### Task 2b: Exit Ticket
 
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/tk2kpwyLDYBJkCG6n/A8TyNmvCG9JaJn).
+Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/tk2kpwyLDYBJkCG6n/A8TyNmvCG9JaJn). DONE
 
 The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
 
