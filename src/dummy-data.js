@@ -54,6 +54,66 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "batman",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: 'https://cdn.pixabay.com/photo/2016/05/02/17/40/batman-1367730__340.jpg',
+        likes: 4307,
+        timestamp: "July 13th 2017, 03:12:09 pm",
+        comments: [
+            {
+                id: 46,
+                username: "batman",
+                text: "....I'm batman.'",
+            },
+            {
+                id: 47,
+                username: "partyonWayne",
+                text: "game on",
+            },
+            {
+                id: 48,
+                username: "partyOnGarth",
+                text: "shwing",
+            },
+            {
+                id: 49,
+                username: "keanu",
+                text: "something is afoot at the circle k",
+            },
+        ],
+    },
+    {
+        id: 3,
+        username: "bob ross",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: 'https://media.istockphoto.com/photos/asbury-park-zombie-walk-2016-picture-id655168448?b=1&k=6&m=655168448&s=170667a&w=0&h=QrlIpp4xNhABlSZ71-04HuH1XSMwYS1Ln2VEWNSvPgg=',
+        likes: 4307,
+        timestamp: "July 13th 2017, 03:12:09 pm",
+        comments: [
+            {
+                id: 56,
+                username: "batman",
+                text: "....I'm batman.'",
+            },
+            {
+                id: 57,
+                username: "partyonWayne",
+                text: "game on",
+            },
+            {
+                id: 58,
+                username: "partyOnGarth",
+                text: "shwing",
+            },
+            {
+                id: 59,
+                username: "keanu",
+                text: "something is afoot at the circle k",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
