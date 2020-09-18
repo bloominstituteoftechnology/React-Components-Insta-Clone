@@ -10,10 +10,12 @@ import React, {useState} from 'react';
 import Posts from './components/Posts/Posts'; 
 import SearchBar from './components/SearchBar/SearchBar'; 
 // Import the dummyData
+import {dummyData} from './dummy-data'
 import './App.css';
 
 const App = () => {
-  // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
+  const [posts,setPosts] = useState(dummyData)
+  // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**. DONE
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
