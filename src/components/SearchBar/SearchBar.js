@@ -9,7 +9,7 @@ const SearchBar = (props) => {
   return (
     <div className="search-bar-wrapper">
       <div className="social">
-        <FontAwesomeIcon icon={faInstagram} />
+        <FontAwesomeIcon id='cam'icon={faInstagram} />
       </div>
       <form className="search-form">
         <input
@@ -19,13 +19,13 @@ const SearchBar = (props) => {
       </form>
       <div className="social-wrapper">
         <div className="social">
-          <FontAwesomeIcon icon={faCompass} />
+          <FontAwesomeIcon id='comp'icon={faCompass} />
         </div>
         <div className="social">
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon id='heart'icon={faHeart}   />
         </div>
         <div className="social">
-          <FontAwesomeIcon icon={faCircle} />
+          <FontAwesomeIcon id='soc'icon={faCircle} />
         </div>
       </div>
     </div>
