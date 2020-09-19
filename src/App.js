@@ -37,7 +37,7 @@ const App = () => {
 
       const updatedPosts = newPosts.map(data => {
         if(postId === data.id){
-          data.likes =+ 1;
+          data.likes += 1;
         }
         return data;
       });
