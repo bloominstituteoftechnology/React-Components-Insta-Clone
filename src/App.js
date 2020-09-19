@@ -10,7 +10,7 @@ import React , {useState} from 'react';
 // Import the dummyData
 import './App.css';
 import dummyData from './dummy-data';
-import PostHeader from './components/Posts/PostHeader'
+import Posts from './components/Posts/Posts'
 import SearchBar from './components/SearchBar/SearchBar'
 // var dummyData = require('./dummy-data.js').default;
 const App = () => {
@@ -19,9 +19,9 @@ const App = () => {
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
   // State for Dummy Data
-  const [postObj,setPostObj] = useState(dummyData);
+  const [posts, setPosts] = useState(dummyData);
   // State to hold  search term
-console.log(postObj);
+// console.log(posts);
 
   // const [searchT, setSearchT] = useState(PostHeader);
 // console.log(searchT);
@@ -39,7 +39,13 @@ console.log(postObj);
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    console.log(postId);
+    setPosts(posts.map((dEl)=>{
+      if(dEl.id === postId){
+        return {...dEl, likes: dEl.likes+1};
+      }else{
+        return dEl;
+      }
+    }))
   };
 
   return (
@@ -53,6 +59,7 @@ console.log(postObj);
 
       {/* Check the implementation of each component, to see what props they require, if any! */}
       <SearchBar />
+      <Posts likePost={likePost} posts={posts}/>
     </div>
   );
 };
