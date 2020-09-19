@@ -10,6 +10,8 @@ import React , {useState} from 'react';
 // Import the dummyData
 import './App.css';
 import dummyData from './dummy-data';
+import PostHeader from './components/Posts/PostHeader'
+import SearchBar from './components/SearchBar/SearchBar'
 // var dummyData = require('./dummy-data.js').default;
 const App = () => {
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
@@ -21,7 +23,7 @@ const App = () => {
   // State to hold  search term
 console.log(postObj);
 
-  // const [searchT, setSearchT] = useState(searchBar);
+  // const [searchT, setSearchT] = useState(PostHeader);
 // console.log(searchT);
 
   const likePost = postId => {
@@ -37,16 +39,20 @@ console.log(postObj);
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
+    console.log(postId);
   };
 
   return (
-    <div className='App'>Hello
+    <div className='App'>
       {
+        // postObj.map( es, e = (ee)=>{
+        //   return ee.id;
+        // })
       
       /* Add SearchBar and Posts here to render them */}
 
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      
+      <SearchBar />
     </div>
   );
 };
