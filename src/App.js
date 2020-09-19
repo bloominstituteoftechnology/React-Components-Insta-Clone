@@ -13,6 +13,8 @@ import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data'
 import './App.css';
 
+
+
 const App = () => {
   const [posts,setPosts] = useState(dummyData)
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**. DONE
@@ -35,9 +37,9 @@ const App = () => {
 
       const updatedPosts = newPosts.map(data => {
         if(postId === data.id){
-          data.likes + 1;
+          data.likes =+ 1;
         }
-        return data
+        return data;
       });
       setPosts(updatedPosts)
 
@@ -47,10 +49,14 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar />
-      
+      <Posts 
+      likePost = {likePost}
+      posts = {posts} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
 };
+
+
 
 export default App;
