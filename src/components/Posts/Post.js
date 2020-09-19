@@ -2,6 +2,7 @@ import React from 'react';
 import Comments from '../Comments/Comments';
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
+import './Posts.css';
 
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!

@@ -8,7 +8,7 @@ const Comment = props => {
   return (
     <div className='comment-text'>
       <span className='user'>{comment.username}</span>
-      {' '}
+      {' Holy shit '}
       <span className='comment'>{comment.text}</span>
     </div>
   );
