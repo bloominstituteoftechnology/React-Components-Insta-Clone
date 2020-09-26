@@ -35,12 +35,6 @@ This project was put together using create-react-app (CRA). You will not need to
 
 Your project should end up looking like [this](https://tk-assets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
 
-### Task 2b: Exit Ticket
-
-Once you begin, you will have 15 minutes to answer the questions [here](https://app.codesignal.com/public-test/tk2kpwyLDYBJkCG6n/A8TyNmvCG9JaJn).
-
-The completion of these questions is mandatory for MVP. However, passing the quiz doesn't affect your standing as a Lambda School student whatsoever. This is Lambda School testing itself! Please answer honestly and to the best of your ability without using external references.
-
 ### Task 3: Stretch Goals
 
 - [ ]  Create more dummy data in the dummy-data.js file and add search functionality to the search bar. One way to do this is with a filter method.
@@ -50,4 +44,3 @@ The completion of these questions is mandatory for MVP. However, passing the qui
 ## Submission Format
 
 - [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
-- [ ] Fill out your module retrospective form [here](https://forms.lambdaschool.com/module-retrospective) with a link to your TL
