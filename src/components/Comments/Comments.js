@@ -9,9 +9,10 @@ const Comments = (props) => {
   return (
     <div>
       {/* map through the comments prop and render a Comment for every piece of data */}
+      {/* nedded index as a key to remove warning */}
       {console.log(comments)}
-      {comments.map((co) => (
-        <Comment comment={co} />
+      {comments.map((commentData, index) => (
+        <Comment comment={commentData} key={index} />
       ))}
       ;
     </div>

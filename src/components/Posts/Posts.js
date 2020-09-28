@@ -9,8 +9,9 @@ const Posts = (props) => {
   return (
     <div className='posts-container-wrapper'>
       {/* Map through the posts array returning a Post component at each iteration */}
-      {posts.map((post) => (
-        <Post post={post} likePost={likePost} />
+      {/* nedded index as a key to remove warning */}
+      {posts.map((post, index) => (
+        <Post post={post} likePost={likePost} key={index} />
       ))}
       {/* Check the implementation of Post to see what props it requires! */}
     </div>
