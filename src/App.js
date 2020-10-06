@@ -41,7 +41,7 @@ const App = () => {
 				if (postId === post.id) {
 					return { ...post, likes: post.likes + 1 };
 				}
-				return post.likes;
+				return post;
 			})
 		);
 	};
