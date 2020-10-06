@@ -8,6 +8,8 @@
 - There is a file provided called `dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
 - Your React application will receive faux post data and render each as a separate Instagram post.
 
+And today.. I'm going back through all the prep work again and I'm going to make progress. 
+
 ## Instructions
 
 ### Task 1: Project Setup
