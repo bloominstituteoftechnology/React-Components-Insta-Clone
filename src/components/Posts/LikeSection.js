@@ -19,7 +19,7 @@ const LikeSection = props => {
         className='like-section'
         key='likes-icons-container'
       >
-        <div onClick={props.incrementLikes} className='like-section-wrapper'>
+        <div onClick={likePost} className='like-section-wrapper'>
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
