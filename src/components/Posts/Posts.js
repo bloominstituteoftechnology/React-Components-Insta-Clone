@@ -8,9 +8,9 @@ const Posts = (props) => {
 
   return (
     <div className='posts-container-wrapper'>
-      {posts.map((postComp) => 
+      {posts.map((postIt) => 
 
-        <Post post={postComp} likePost={likePost} />
+        <Post post={postIt} likePost={likePost} />
         )
       }
 
