@@ -15,3 +15,12 @@ const Posts = (props) => {
 };
 
 export default Posts;
+
+
+const obj = {
+  hello:"world",
+  add:function(){
+    return "what"
+  }
+}
+
