@@ -6,6 +6,9 @@
 
 // Import the state hook
 import React from 'react';
+import Posts from './components/Posts/Posts';
+import SearchBar from './components/SearchBar/SearchBar';
+import dummyData from './dummy-data';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import './App.css';
