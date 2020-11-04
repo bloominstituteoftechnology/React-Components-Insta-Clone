@@ -1,38 +1,25 @@
 /* 
-  Start here and work your way down the nested components.
-  Not all files in the project need code added.
-  Look at each file to see what props need to be passed!
+Start here and then work through the 
+PostsContainer components and the CommentSection Components. 
+Not all files need code added. 
+Look at each file to see where you need to pass props or add code 
 */
+import React, { useState } from "react";
+import "./App.css";
+// import the PostsPage and SearchBar and add them to the App
 
-// Import the state hook
-import React from 'react';
-// Import the Posts (plural!) and SearchBar components, since they are used inside App component
-// Import the dummyData
-import './App.css';
+import PostsPage from "./components/PostsContainer/PostsPage";
+import SearchBar from "./components/SearchBar/SearchBarContainer";
+import dummyData from "./dummy-data";
 
 const App = () => {
-  // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
-  // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
-  // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
-  const likePost = postId => {
-    /*
-      This function serves the purpose of increasing the number of likes by one, of the post with a given id.
-
-      The state of the app lives at the top of the React tree, but it wouldn't be fair for nested components not to be able to change state!
-      This function is passed down to nested components through props, allowing them to increase the number of likes of a given post.
-
-      Invoke `setPosts` and pass as the new state the invocation of `posts.map`.
-      The callback passed into `map` performs the following logic:
-        - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
-        - otherwise just return the post object unchanged.
-     */
-  };
-
+ // console.log("here is the data", data.dummyData[0]);
   return (
-    <div className='App'>
-      {/* Add SearchBar and Posts here to render them */}
-      {/* Check the implementation of each component, to see what props they require, if any! */}
+    <div className="App">
+      {/* Add imported components here to render them */}
+       <SearchBar />
+      <PostsPage data={dummyData} />
     </div>
   );
 };
