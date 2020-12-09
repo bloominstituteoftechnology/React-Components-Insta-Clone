@@ -29,7 +29,6 @@ const [posts, setPosts] = useState(dummyData)
   })
       setPosts(newPost)
   }
-  
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
@@ -41,13 +40,13 @@ const [posts, setPosts] = useState(dummyData)
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-  
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <Search/>
-      <Posts likePost = {likePost}/>
+      <Posts likePost = {likePost} post = {posts}/>
+      
       {/* Check the implementation of each component, to see what props they require, if any! */}
 
     </div>
