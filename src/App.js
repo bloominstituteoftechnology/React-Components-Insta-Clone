@@ -35,7 +35,7 @@ const App = () => {
     setPosts(
       posts.map((post) => {
         return postId ? { ...post, likes: post.likes + 1 } : post;
-        //creating a brand new object with all of the values within post
+       
       })
     );
   };
