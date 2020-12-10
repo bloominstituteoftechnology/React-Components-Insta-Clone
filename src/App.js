@@ -64,8 +64,8 @@ const App = () => {
 
       {/* Check the implementation of each component, to see what props they require, if any! */}
 
-
-      {/* <Comments/> */}
+      {/* how to pass in comments prop below? WRONG PLACE
+      <Comments comments={posts.comments}/> */}
 
     </div>
   );
