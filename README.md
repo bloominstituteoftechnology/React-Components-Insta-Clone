@@ -1,4 +1,5 @@
 # React-Components-Insta-Clone
+//Clayton Wilkerson 12/21/20
 
 ## Composing React Components and Passing Data Via Props
 
