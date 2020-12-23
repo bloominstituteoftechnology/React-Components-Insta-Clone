@@ -43,21 +43,39 @@ export default function App() {
 
       if (postId === post.id) {
         // let likes = post.likes;
+        console.log("likePost is running")
         return { ...post, likes: post.likes + 1};
       } else {
         return post;
       }
      }));
-  };
+  };  // gets passed down through props
+
+  // 
+  const getFilteredPosts = (searchTerm) => {
     
+    // filter function over posts array, return filtered array
+      let filteredPosts = posts.filter(
+          posts.forEach( post => {
+            if (searchTerm.trim() === post.username || searchTerm.toLowerCase() === post.username || searchTerm === post.username) {
+              return post;
+            } 
+          })
+      );
+    console.log("getFilteredPosts func is running")
+    setPosts(filteredPosts);
+  }; // passes searchTerm, filters through posts array, creates filteredPosts array, setsPosts to filteredPosts
+    
+
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
-      <SearchBar setSearchTerm={setSearchTerm} />
+      <SearchBar getFilteredPosts={() => getFilteredPosts(searchTerm)} setSearchTerm={setSearchTerm} posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      <Posts posts={posts}/>
+      <Posts likePost={likePost} posts={posts}/>
     </div>
   );
 };
 
+{/* <LikeSection numberOfLikes={post.likes} post={post}  likePost={() => likePost(post.id)} /> */}
