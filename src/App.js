@@ -38,6 +38,7 @@ export default function App() {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
   //    */
+  
   const likePost = postId => {
     setPosts(posts.map(post => {
 
@@ -53,29 +54,36 @@ export default function App() {
 
   // 
   const getFilteredPosts = (searchTerm) => {
-    
     // filter function over posts array, return filtered array
-      let filteredPosts = posts.filter(
-          posts.forEach( post => {
-            if (searchTerm.trim() === post.username || searchTerm.toLowerCase() === post.username || searchTerm === post.username) {
-              return post;
-            } 
-          })
-      );
+      const filteredPosts = posts.filter( post => {
+        // console.log("boolean: ", (searchTerm.trim() === post.username) || 
+        // (searchTerm.toLowerCase() === post.username) || 
+        // (searchTerm === post.username))
+
+        const username = post.username.toLowerCase();
+        const searchText = searchTerm.toLowerCase().trim();
+       // setPosts(filteredPosts); // cannot redefine posts within the filter, because you need it to filter the entire posts array
+        return (username.includes(searchText));
+
+      }); // end of filter
+
     console.log("getFilteredPosts func is running")
+    console.log("filtered: ", filteredPosts)
+
     setPosts(filteredPosts);
-  }; // passes searchTerm, filters through posts array, creates filteredPosts array, setsPosts to filteredPosts
+
+  }  // passes searchTerm, filters through posts array, creates filteredPosts array
     
 
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
-      <SearchBar getFilteredPosts={() => getFilteredPosts(searchTerm)} setSearchTerm={setSearchTerm} posts={posts}/>
+      <SearchBar getFilteredPosts={getFilteredPosts} setSearchTerm={setSearchTerm} posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
       <Posts likePost={likePost} posts={posts}/>
     </div>
   );
 };
 
-{/* <LikeSection numberOfLikes={post.likes} post={post}  likePost={() => likePost(post.id)} /> */}
+/* <LikeSection numberOfLikes={post.likes} post={post}  likePost={() => likePost(post.id)} /> QUESTION:  Why is the Search Bar prop not written like this? Is it because the likePost depends on a click event?  */

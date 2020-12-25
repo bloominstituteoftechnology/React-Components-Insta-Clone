@@ -8,13 +8,14 @@ import "./SearchBar.css";
 const SearchBar = (props) => {
   const { getFilteredPosts, setSearchTerm, posts } = props;
 
-  // console.log(getFilteredPosts)
+  // console.log("getFilteredPosts: ", getFilteredPosts)
+
   const changeHandler = (e) => {
     // not the same variable as searchTerm in App.js
     const searchTerm = e.target.value;
-    // this.setSearchTerm({searchTerm: e.target.value}) // cleaner option 
+    //setSearchTerm({searchTerm: e.target.value}) // cleaner option 
+    getFilteredPosts(searchTerm);
     console.log("The changeHandler is running.")
-    console.log("searchTerm: ", searchTerm)
   }
 
   return (
@@ -27,7 +28,7 @@ const SearchBar = (props) => {
           type="text"
           placeholder="Search"
           onChange={changeHandler} 
-          onEnter={getFilteredPosts}
+          /* onEnter={getFilteredPosts} */
           /* onChange={getFilteredPosts} */
           
         />
