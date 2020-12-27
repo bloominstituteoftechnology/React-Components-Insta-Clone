@@ -4,7 +4,7 @@ import './Posts.css';
 
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
-  const { likePost, posts } = props;
+  const { likePost, posts, changeInput, addComment } = props;
   // console.log("posts: ", posts) // passed
   // console.log("likePost: ", likePost); // undef
 
@@ -13,7 +13,7 @@ const Posts = (props) => {
       {/* Map through the posts array returning a Post component at each iteration */}
       
       {posts.map(post => {
-        return <Post key={post.id} post={post} likePost={likePost}  />
+        return <Post key={post.id} post={post} likePost={likePost} changeInput={changeInput} addComment={addComment}/>
       })}
 
       {/* Check the implementation of Post to see what props it requires! */}

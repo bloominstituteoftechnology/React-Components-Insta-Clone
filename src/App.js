@@ -23,6 +23,8 @@ export default function App() {
   const [ posts, setPosts ] = useState(dummyData);
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
   const [ searchTerm, setSearchTerm ] = useState('');
+  // Set the state for the input element to add comments
+  const [ inputValue, setInputValue ] = useState("");
 
   // console.log("posts: ", posts);
   // console.log("searchTerm: ", searchTerm);
@@ -52,7 +54,6 @@ export default function App() {
      }));
   };  // gets passed down through props
 
-  // 
   const getFilteredPosts = (searchTerm) => {
     // filter function over posts array, return filtered array
       const filteredPosts = posts.filter( post => {
@@ -73,15 +74,51 @@ export default function App() {
     setPosts(filteredPosts);
 
   }  // passes searchTerm, filters through posts array, creates filteredPosts array
-    
 
+  const changeInput = evt => {
+    const { value } = evt.target;
+    setInputValue(value);
+
+    console.log("The comment input is running.")
+    console.log("InputValue: ", inputValue);
+}; // 
+
+  const addComment = (postId) => {
+    console.log("addComment is running")
+    console.log("postId: ", postId)
+
+    const newPosts = posts.slice()
+    const post = newPosts.find(post => post.id === postId);
+
+    if (post !== undefined) {
+      console.log("post: ", post)
+      const commentArray = post.comments;
+      const arrayLength = commentArray.length;
+      const lastComment = commentArray[arrayLength -1];
+      const newId = lastComment.id + 1; 
+
+      const username = "Anonymous";
+
+      const addComment = {
+        id: newId,
+        username: username,
+        text: inputValue
+      };
+
+      post.comments.push(addComment); 
+
+      setPosts(newPosts);
+    };
+
+
+  }; // passes post.id & inputValue, updates DOM with new comment
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar getFilteredPosts={getFilteredPosts} setSearchTerm={setSearchTerm} posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
-      <Posts likePost={likePost} posts={posts}/>
+      <Posts likePost={likePost} posts={posts} changeInput={changeInput} addComment={addComment}/>
     </div>
   );
 };

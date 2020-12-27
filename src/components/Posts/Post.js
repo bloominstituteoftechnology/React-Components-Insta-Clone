@@ -5,7 +5,7 @@ import PostHeader from './PostHeader';
 
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
-  const { post, likePost } = props;
+  const { post, likePost, changeInput, addComment } = props;
   // console.log("post: ", post) // passed
   // console.log(post); // post returns a single post if .mapped propertly in Posts.js
 
@@ -25,7 +25,7 @@ const Post = props => {
       {/* Is LikeSection getting all the props it needs to work correctly? */}
       <LikeSection numberOfLikes={post.likes} post={post}  likePost={() => likePost(post.id)} />
       {/* Comments also wants its props! */}
-      <Comments comments={post.comments}/>
+      <Comments post={post} comments={post.comments} changeInput={changeInput} addComment={addComment}/>
     </div>
   );
 };
