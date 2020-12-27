@@ -10,7 +10,7 @@
 
 ## Instructions
 
-### Task 1: Project Setup
+### Task 1: Project Setup COMPLETE
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
@@ -23,7 +23,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [x] Create a new branch: git checkout -b `<firstName-lastName>`. Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [x] Push commits: git push origin `<firstName-lastName>`.
 
-### Task 2a: MVP
+### Task 2a: MVP COMPLETE
 
 - [x] This app can be broken down to two main sections that you'll need to implement for this project: the Search Bar and the Posts.
 - [x] To complete this project there will be a single instance of the Search Bar being rendered at the top of the page, as well as a Posts component that renders an individual Post for every object inside the `dummy-data.js` array.
@@ -35,7 +35,7 @@ This project was put together using create-react-app (CRA). You will not need to
 
 Your project should end up looking like [this](https://tk-assets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
 
-### Task 3: Stretch Goals
+### Task 3: Stretch Goals COMPLETE
 
 - [x] Create more dummy data in the dummy-data.js file and add search functionality to the search bar. One way to do this is with a filter method.
 - [ ] Implement the ability to add comments to a post using an input.

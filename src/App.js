@@ -81,12 +81,9 @@ export default function App() {
 
     console.log("The comment input is running.")
     console.log("InputValue: ", inputValue);
-}; // 
+}; // changes state of the inputValue on event
 
   const addComment = (postId) => {
-    console.log("addComment is running")
-    console.log("postId: ", postId)
-
     const newPosts = posts.slice()
     const post = newPosts.find(post => post.id === postId);
 
@@ -110,8 +107,7 @@ export default function App() {
       setPosts(newPosts);
     };
 
-
-  }; // passes post.id & inputValue, updates DOM with new comment
+  }; // passes post.id & updates DOM with new comment
 
   return (
     <div className='App'>
@@ -122,5 +118,3 @@ export default function App() {
     </div>
   );
 };
-
-/* <LikeSection numberOfLikes={post.likes} post={post}  likePost={() => likePost(post.id)} /> QUESTION:  Why is the Search Bar prop not written like this? Is it because the likePost depends on a click event?  */

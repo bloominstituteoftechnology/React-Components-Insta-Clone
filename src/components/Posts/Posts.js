@@ -5,8 +5,6 @@ import './Posts.css';
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
   const { likePost, posts, changeInput, addComment } = props;
-  // console.log("posts: ", posts) // passed
-  // console.log("likePost: ", likePost); // undef
 
   return (
     <div className='posts-container-wrapper'>
