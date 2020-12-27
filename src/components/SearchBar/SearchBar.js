@@ -6,6 +6,18 @@ import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icon
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
+  const { getFilteredPosts, setSearchTerm, posts } = props;
+
+  // console.log("getFilteredPosts: ", getFilteredPosts)
+
+  const changeHandler = (e) => {
+    // not the same variable as searchTerm in App.js
+    const searchTerm = e.target.value;
+    //setSearchTerm({searchTerm: e.target.value}) // cleaner option 
+    getFilteredPosts(searchTerm);
+    console.log("The changeHandler is running.")
+  }
+
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -15,6 +27,10 @@ const SearchBar = (props) => {
         <input
           type="text"
           placeholder="Search"
+          onChange={changeHandler} 
+          /* onEnter={getFilteredPosts} */
+          /* onChange={getFilteredPosts} */
+          
         />
       </form>
       <div className="social-wrapper">

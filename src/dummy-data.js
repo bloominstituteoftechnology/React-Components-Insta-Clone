@@ -54,6 +54,41 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "islander",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: 'https://cdn.pixabay.com/photo/2014/06/30/08/02/zitronenfalter-fish-380037_1280.jpg',
+        likes: 700,
+        timestamp: "July 16th 2017, 07:00:00 am",
+        comments: [
+            {
+                id: 41,
+                username: "yolo",
+                text: "Hawaii here I come!",
+            },
+            {
+                id: 42,
+                username: "islanderOne",
+                text: "Omg",
+            },
+            {
+                id: 43,
+                username: "findmeatthebeach",
+                text: "I want one",
+            },
+            {
+                id: 44,
+                username: "coffeeeee",
+                text: "Love it",
+            },
+            {
+                id: 45,
+                username: "i_would_like_a_latte",
+                text: "Wait what?",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
