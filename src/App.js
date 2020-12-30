@@ -23,7 +23,7 @@ const App = () => {
   //log(SearchBar);
 
   const [posts, setPosts] = useState(dummyData);
-  const [search, setSearch] = useState("");
+
   //Debug log to ensure passed through use state
   log(posts);
 
@@ -39,15 +39,15 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    setPosts(posts.map( post => {
+    setPosts(posts.map( element => {
       if (postId === post.id){
-        log(postId);
-        return {...post, likes: post.likes + 1}
-       
+       const like = element.likes + 1
+       const newPost = {...element, 'likes' : likes}
+       return newPost; 
       }
       else
       {
-        return post;
+        return element;
       }
     }));
   };
@@ -56,7 +56,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
-       <SearchBar />
+       <Search />
        <Posts likePost = { likePost } posts = { posts } />
      
     </div>
