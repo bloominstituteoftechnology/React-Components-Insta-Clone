@@ -13,7 +13,7 @@ const Post = props => {
   
   return (
     <div className='post-border'>
-      <PostHeader post={post}
+      <PostHeader post={Posts}
         username={props.post.username}
         thumbnailUrl={props.post.thumbnailUrl}
       />
