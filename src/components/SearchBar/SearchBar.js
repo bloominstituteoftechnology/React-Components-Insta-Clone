@@ -11,12 +11,13 @@ const SearchBar = (props) => {
       <div className="social">
         <FontAwesomeIcon icon={faInstagram} />
       </div>
-      <form className="search-form">
+      <div className="search-form">
         <input
           type="text"
           placeholder="Search"
+          onChange={props.onChange}
         />
-      </form>
+      </div>
       <div className="social-wrapper">
         <div className="social">
           <FontAwesomeIcon icon={faCompass} />
