@@ -6,6 +6,7 @@ import "./Posts.css";
 // import data 
 
 const PostsPage = () => {
+  console.log(Post);
   // set up state for your data
   return (
     <div className="posts-container-wrapper">
