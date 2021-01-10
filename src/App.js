@@ -16,6 +16,7 @@ import './App.css';
 import Post from './components/Posts/Post';
 import PostHeader from './components/Posts/PostHeader';
 
+
 const App = () => {
 
   
@@ -24,11 +25,29 @@ const App = () => {
 
   const [posts, setPosts]=useState(dummyData);
   
+  
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
   const likePost = postId => {
+    console.log(postId);
+    
+    setPosts(posts.map((post)=>{
+      if(postId == post.id){
+        console.log(post.likes);
+        const newlikes=post.likes + 1;
+        return{
+          ...post,
+          likes:newlikes
+        }
+        
+      } else{
+        return post;
+      } 
+      
+    }));
+    
 
     
     
@@ -51,7 +70,9 @@ const App = () => {
   return (
     <div className='App'>
       
-      <Posts posts={posts}/>
+      <Posts posts={posts} likePost={likePost}/>
+      
+      
 
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
