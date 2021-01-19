@@ -31,7 +31,7 @@ This project was put together using create-react-app (CRA). You will not need to
 - [ ]  You will implement a callback to increase the "likes count" on posts, and hand it through props several levels down into a nested component.
 - [ ]  Look through the code before you start. There are a lot of files. Not all of them need code added to them. Start in the App.js file and read the instructions there.
 
----
+
 
 Your project should end up looking like [this](https://tk-assets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
 
