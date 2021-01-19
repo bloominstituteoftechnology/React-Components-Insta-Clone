@@ -13,7 +13,7 @@ const Posts = (props) => {
       {/* Check the implementation of Post to see what props it requires! */}
       {
         posts.map((post) => {
-          return <Post post={post} likePost={likePost}/>
+          return <Post key={post.id} post={post} likePost={likePost}/>
         })
       }
     </div>
