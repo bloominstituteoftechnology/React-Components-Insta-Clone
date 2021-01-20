@@ -9,6 +9,7 @@ import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import Posts from "./components/Posts/Posts";
+// import Post from "./components/Posts/Post";
 import SearchBar from "./components/SearchBar/SearchBar";
 import './App.css';
 import dummyData from './dummy-data';
@@ -32,7 +33,7 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     setPosts(posts.map(post => {
-      return postId === post.id ? { ...post.likes + 1} : { ...post } 
+      return postId === post.postId ? { ...post, likes: post.likes + 1} : { ...post } 
     }))
   };
 
