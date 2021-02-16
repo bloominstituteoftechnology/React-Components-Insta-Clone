@@ -50,3 +50,16 @@
   margin: 15px 0px;
   font-size: 16px;
 }
+
+.bounce {
+  animation-duration: 0.5s;
+  animation-name: bounce;
+}
+
+@keyframes bounce {
+  0% {transform: scale(0.6)}
+  15% {transform: scale(0.5)}
+  40% {transform: scale(1.2)}
+  60% {transform: scale(0.8)}
+  100% {transform: scale(1.0)}
+}
