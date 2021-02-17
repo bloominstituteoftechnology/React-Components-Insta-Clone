@@ -1,16 +1,18 @@
+// You do not need to change this file.
 import React from 'react';
-import Comment from './Comment';
-import './Comments.css';
 
-const Comments = props => {
-  // 🔥 Make sure the parent of Comments is passing the right props!
-  const { comments } = props;
+const Comment = props => {
+  // 🔥 Make sure the parent of Comment is passing the right props!
+  const { comment } = props;
 
   return (
-    <div>
-      {/* map through the comments prop and render a Comment for every piece of data */}
+    <div className='comment-text'>
+      <span className='user'>{comment.username}</span>
+      {' '}
+      <span className='comment'>{comment.text}</span>
     </div>
   );
 };
 
-export default Comments;
+
+export default Comment;
