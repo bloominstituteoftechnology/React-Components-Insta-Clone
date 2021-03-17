@@ -32,7 +32,7 @@ This project was put together using create-react-app (CRA). You will not need to
 
 ---
 
-Your project should end up looking like [this](https://tk-assets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
+Your project should end up looking like [this](https://tk-anpmssets.lambdaschool.com/228297b1-2407-4e39-9704-3926767e4ac7_insta-clone.png)
 
 ### Task 3: Stretch Goals
 
