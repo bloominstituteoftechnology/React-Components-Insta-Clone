@@ -18,5 +18,4 @@ const PostHeader = props => {
     </div>
   );
 };
-
 export default PostHeader;
