@@ -50,7 +50,7 @@ const dummyData = [
             {
                 id: 39,
                 username: "dennis_futbol",
-                text: "It that injustice",
+                text: "Is that injustice",
             },
         ],
     },
