@@ -16,6 +16,7 @@ import SearchBar from './components/SearchBar/SearchBar.js'
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import './App.css';
+import './dummy-data.js'
 import dummyData from './dummy-data.js'
 const App = () => {
   const [posts, setposts] = useState(dummyData);
