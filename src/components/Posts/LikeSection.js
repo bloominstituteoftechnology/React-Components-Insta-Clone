@@ -17,13 +17,13 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon onClick={likePost} icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>100 likes</p>
+      <p className='like-number'>{numberOfLikes}</p>
     </div>
   );
 };
