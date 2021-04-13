@@ -21,6 +21,8 @@ const App = () => {
 
   const [posts, setPosts] = useState(dummyData);
 
+  const [search, setSearch] = useState('');
+
   const likePost = postId => {
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
@@ -35,11 +37,24 @@ const App = () => {
      */
 
     setPosts(posts.map((post) => {
-
-      if (post.id === postId && !post.liked) {
-        post.likes++;
-        post.liked = true;
-        return post;
+      if (post.id === postId) {
+        switch (post.liked) {
+          // case (false): {
+          //   post.likes++;
+          //   post.liked = true;
+          //   return post;
+          // }
+          case (true): {
+            post.likes--;
+            post.liked = false;
+            return post;
+          }
+          default: {
+            post.likes++;
+            post.liked = true;
+            return post;
+          }
+        }
       }
       else {
         return post;
@@ -48,10 +63,33 @@ const App = () => {
     }));
   };
 
+  const searchPost = evt => {
+
+    const { value } = evt.target;
+
+    setSearch(value);
+
+    const run = dummyData.filter((post) => {
+
+      if (value.length > 0) {
+        if (post.username.includes(value)) {
+          return post;
+        }
+      }
+      else {
+        return post;
+      }
+
+    });
+
+    setPosts(run);
+
+  };
+
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
-      {SearchBar(posts)}
+      {SearchBar({ searchPost, search })}
       {Posts({ likePost, posts })}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
