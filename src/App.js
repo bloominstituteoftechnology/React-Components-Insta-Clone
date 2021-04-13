@@ -7,10 +7,10 @@
 // Import the state hook
 import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-import Posts from './components/Posts/Posts.js';
-import SearchBar from './components/SearchBar/SearchBar.js';
+import Posts from './components/Posts/Posts';
+import SearchBar from './components/SearchBar/SearchBar';
 // Import the dummyData
-import dummyData from './dummy-data.js';
+import dummyData from './dummy-data';
 
 import './App.css';
 
@@ -23,7 +23,34 @@ const App = () => {
 
   const [search, setSearch] = useState('');
 
+  const [comment, setComment] = useState(false);
+
+  const showComments = postId => {
+
+    const map = posts.map((post) => {
+      if (post.id === postId) {
+        switch(post.show) {
+          case (true): {
+            post.show = false;
+            return post;
+          }
+          default: {
+            post.show = true;
+            return post;
+          }
+        }
+      }
+      else {
+        return post;
+      }
+    });
+
+    setPosts(map);
+
+  };
+
   const likePost = postId => {
+
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
@@ -36,14 +63,9 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
 
-    setPosts(posts.map((post) => {
+    const map = posts.map((post) => {
       if (post.id === postId) {
         switch (post.liked) {
-          // case (false): {
-          //   post.likes++;
-          //   post.liked = true;
-          //   return post;
-          // }
           case (true): {
             post.likes--;
             post.liked = false;
@@ -60,7 +82,10 @@ const App = () => {
         return post;
       }
 
-    }));
+    });
+
+    setPosts(map);
+
   };
 
   const searchPost = evt => {
@@ -69,7 +94,7 @@ const App = () => {
 
     setSearch(value);
 
-    const run = dummyData.filter((post) => {
+    const filter = dummyData.filter((post) => {
 
       if (value.length > 0) {
         if (post.username.includes(value)) {
@@ -82,15 +107,15 @@ const App = () => {
 
     });
 
-    setPosts(run);
+    setPosts(filter);
 
   };
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
-      {SearchBar({ searchPost, search })}
-      {Posts({ likePost, posts })}
+      {SearchBar({ search, searchPost })}
+      {Posts({ posts, likePost, showComments })}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );

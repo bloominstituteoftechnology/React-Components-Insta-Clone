@@ -4,12 +4,12 @@
 // (As a stretch goal, you might want to prevent your user from "liking" the same post more than once.)
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faComment, faHeart as regular } from '@fortawesome/free-regular-svg-icons';
-import { faHeart as solid } from '@fortawesome/free-solid-svg-icons';
+import { faComment as farComment, faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
+import { faComment as fasComment, faHeart as fasHeart } from '@fortawesome/free-solid-svg-icons';
 
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
-  const { likePost, numberOfLikes, liked } = props;
+  const { likePost, numberOfLikes, liked, showComments, show } = props;
 
   return (
     <div>
@@ -18,10 +18,10 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={liked ? solid : regular} color={liked ? '#FD1D1D' : null} onClick={likePost} />
+          <FontAwesomeIcon icon={liked ? fasHeart : farHeart} color={liked ? '#FD1D1D' : null} onClick={likePost} />
         </div>
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faComment} />
+          <FontAwesomeIcon icon={show ? fasComment : farComment} color={show ? '#101010' : null} onClick={showComments}/>
         </div>
       </div>
       <p className='like-number'>{numberOfLikes} likes</p>

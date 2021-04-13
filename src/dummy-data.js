@@ -53,7 +53,7 @@ const dummyData = [
                 text: "It that injustice",
             },
         ],
-    },
+    }
 ];
 
 export default dummyData;
