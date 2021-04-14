@@ -5,7 +5,7 @@ import PostHeader from './PostHeader';
 
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
-  const { post, likePost } = props;
+  const { post, likePost, showComments, submit, text, changeText } = props;
 
   return (
     <div className='post-border'>
@@ -18,12 +18,13 @@ const Post = props => {
           alt='post thumbnail'
           className='post-image'
           src={post.imageUrl}
+          onDoubleClick={() => likePost(post.id)}
         />
       </div>
       {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection likePost={() => likePost(post.id)} />
+      <LikeSection likePost={() => likePost(post.id)} numberOfLikes={post.likes} liked={post.liked} showComments={() => showComments(post.id)} show={post.show} />
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments comments={post.comments} show={post.show} id={post.id} submit={submit} text={text} changeText={changeText} />
     </div>
   );
 };
