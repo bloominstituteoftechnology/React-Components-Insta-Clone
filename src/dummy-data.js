@@ -56,4 +56,12 @@ const dummyData = [
     },
 ];
 
+
+
+const userData = 'Anonymous';
+
 export default dummyData;
+
+export { userData };
+
+
