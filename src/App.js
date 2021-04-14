@@ -10,7 +10,7 @@ import React, { useState } from 'react';
 import Posts from './components/Posts/Posts';
 import SearchBar from './components/SearchBar/SearchBar';
 // Import the dummyData
-import dummyData from './dummy-data';
+import dummyData, { userData } from './dummy-data';
 
 import './App.css';
 
@@ -23,7 +23,31 @@ const App = () => {
 
   const [search, setSearch] = useState('');
 
-  const [comment, setComment] = useState(false);
+  const [text, setText] = useState('');
+
+  const changeText = evt => {
+
+    const { value } = evt.target;
+
+    setText(value);
+
+  };
+
+  const submit = postId => {
+
+    const map = posts.map((post) => {
+      if (post.id === postId && text.length > 0) {
+        post.comments.push({ id: post.comments[post.comments.length - 1].id + 1, username: userData.toLowerCase(), text });
+        return post;
+      }
+      else {
+        return post;
+      }
+    });
+
+    setPosts(map);
+
+  };
 
   const showComments = postId => {
 
@@ -115,7 +139,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {SearchBar({ search, searchPost })}
-      {Posts({ posts, likePost, showComments })}
+      {Posts({ posts, likePost, showComments, submit, text, changeText })}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );

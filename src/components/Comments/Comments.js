@@ -2,9 +2,28 @@ import React from 'react';
 import Comment from './Comment';
 import './Comments.css';
 
+const Custom = (props) => {
+
+  const { id, submit, text, changeText } = props;
+
+  return(
+    <div className='comment-text'>
+      <form>
+        <input
+          type='text'
+          placeholder='Comment'
+          onChange={changeText}
+          // value={text}
+        />
+        <button type='button' onClick={() => submit(id)}>Comment</button>
+      </form>
+    </div>
+  )
+}
+
 const Comments = props => {
   // 🔥 Make sure the parent of Comments is passing the right props!
-  const { comments, show } = props;
+  const { comments, show, id, submit, text, changeText } = props;
 
   return (
     <div>
@@ -15,6 +34,9 @@ const Comments = props => {
             return Comment({ comment });
           }
         })
+      }
+      {
+         show ? Custom({ id, submit, text, changeText }) : null
       }
     </div>
   );
