@@ -5,6 +5,7 @@ import PostHeader from './PostHeader';
 import Posts from './Posts';
 
 const Post = props => {
+  
   const { post, likePost } = props;
 
   return (
@@ -21,7 +22,7 @@ const Post = props => {
         />
       </div>
       <LikeSection likePost={() => likePost(post.id)} numberOfLikes={post.likes} />
-      <Comments likePost={() => likePost(post.id)} comments={post.comments} />
+      <Comments comments={post.comments} />
     </div>
   );
 };

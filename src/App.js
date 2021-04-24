@@ -11,14 +11,15 @@ const App = () => {
 
   const likePost = postId => {
     setPosts(posts.map((post) => {
-      return (post.id === postId) ? {...posts, likes: post.likes + 1} :  posts
+      return (post.id === postId) ? {...post, likes: post.likes + 1} :  post
     }))
   };
 
   return (
     <div className='App'>
+
       <SearchBar />
-      <Posts likePost={likePost} posts={posts}/>
+      <Posts likePost={likePost} posts={posts} />
     </div>
   );
 };

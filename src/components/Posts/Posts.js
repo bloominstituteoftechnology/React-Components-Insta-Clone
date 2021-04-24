@@ -3,6 +3,7 @@ import Post from './Post';
 import './Posts.css';
 
 const Posts = (props) => {
+  
   const { likePost, posts } = props;
 
   return (
