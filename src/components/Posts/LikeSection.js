@@ -5,10 +5,11 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+import Posts from './Posts';
 
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
-  const { likePost, numberOfLikes } = props;
+  const { likePost, likes } = props;
 
   return (
     <div>
@@ -17,13 +18,14 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon onClick={()=> likePost()} icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>{numberOfLikes} likes</p>
+      <p className='like-number'> {props.post.likes} likes</p>
+      
     </div>
   );
 };
