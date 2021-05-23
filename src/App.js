@@ -20,6 +20,7 @@ const App = () => {
    const [posts , setPosts ] = useState(dummyData);
    console.log("The posts forom dumm , posts" , posts)
    const  [search, setSearch] = useState("")
+  
   const likePost = postId => {
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
