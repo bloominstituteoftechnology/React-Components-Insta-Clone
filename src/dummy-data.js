@@ -54,6 +54,31 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "Amlak Befekadu",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: '../../V.jpg',
+        likes: 500,
+        timestamp: "July 17th 2017, 12:42:40 pm",
+        comments: [
+            {
+                id: 2,
+                username: "philzcoffee",
+                text: "We've got more than just coffees!",
+            },
+            {
+                id: 3,
+                username: "biancasaurus",
+                text: "Looks delicious!",
+            },
+            {
+                id: 4,
+                username: "martinseludo",
+                text: "Can't wait to try it!",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
