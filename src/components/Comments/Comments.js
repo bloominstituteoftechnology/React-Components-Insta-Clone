@@ -1,13 +1,15 @@
-import React from 'react';
-import Comment from './Comment';
-import './Comments.css';
+import React from "react";
+import Comment from "./Comment";
+import "./Comments.css";
 
-const Comments = props => {
+const Comments = (props) => {
   const { comments } = props;
 
   return (
     <div>
-      {comments.map(comment => <Comment comment={comment} />)}
+      {comments.map((comment, index) => (
+        <Comment key={index} comment={comment} />
+      ))}
     </div>
   );
 };
