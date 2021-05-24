@@ -1,11 +1,16 @@
 // You do not need to change any code in this file for MVP
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icons';
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
+
+  const [searchedText, setSearchedText] = useState('');
+
+  const {search} =props;
+  
   return (
     <div className="search-bar-wrapper">
       <div className="social">
