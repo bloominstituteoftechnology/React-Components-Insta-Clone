@@ -3,7 +3,7 @@
   Not all files in the project need code added.
   Look at each file to see what props need to be passed!
 */
-
+   
 // Import the state hook
 import React from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
