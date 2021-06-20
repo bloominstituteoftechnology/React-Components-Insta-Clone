@@ -41,13 +41,6 @@ const App = () => {
     
   };
 
-//   setPosts(posts.map(post => {
-//     if (post.id === postId) {
-//       return { ...post, likes: post.likes + 1 }
-//     } else return post
-//   }))
-// };
-
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
