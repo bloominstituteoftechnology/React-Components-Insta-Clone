@@ -5,7 +5,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icons';
 import "./SearchBar.css";
 
-const SearchBar = (props) => {
+const SearchBar = ({searchTerm,setSearchTerm}) => {
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -15,7 +15,12 @@ const SearchBar = (props) => {
         <input
           type="text"
           placeholder="Search"
-        />
+          onChange={e => setSearchTerm(e.target.value)}
+          onKeyDown={e=>{
+            if (e.keyCode === 13) {
+              e.preventDefault();
+              return false}
+            }}/>
       </form>
       <div className="social-wrapper">
         <div className="social">

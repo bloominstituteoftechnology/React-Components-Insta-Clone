@@ -54,6 +54,61 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "yomama",
+        thumbnailUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/SpongeBob_SquarePants_character.svg/1200px-SpongeBob_SquarePants_character.svg.png',
+        imageUrl: 'https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/beach_safety_covid_19_other/1800x1200_beach_safety_covid_19_other.jpg',
+        likes: 420,
+        timestamp: "July 4th 1777, 12:42:40 pm",
+        comments: [
+            {
+                id: 40,
+                username: "yomama",
+                text: "Enjoying the independence!",
+            },
+            {
+                id: 41,
+                username: "benjiefrank",
+                text: "Can't wait to get out of this office and get my tan on!",
+            },
+            {
+                id: 42,
+                username: "betsyross",
+                text: "What beach is that? I want to try out my new suit!",
+            },
+        ],
+    },
+    {
+        id: 4,
+        username: "elephant",
+        thumbnailUrl: 'https://cdn0.iconfinder.com/data/icons/pets-1-1/24/mammal-pets-tusks-trunk-animals-elephant-head-face-512.png',
+        imageUrl: 'http://cdn.cnn.com/cnnnext/dam/assets/150524103855-instagram-leblanc-elephant.png',
+        likes: 500000,
+        timestamp: "April 17th 1998, 03:45:09 pm",
+        comments: [
+            {
+                id: 43,
+                username: "elephant",
+                text: "This nice guy let me take a selfie with his camera :)",
+            },
+            {
+                id: 44,
+                username: "michaeljhehe",
+                text: "Looking good! We should grab drinks sometime!",
+            },
+            {
+                id: 45,
+                username: "mr.blueshorts",
+                text: "It was the least I could do after you saved me from those tigers!",
+            },
+            {
+                id: 46,
+                username: "theronaldo",
+                text: "Your new place looks great!",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
