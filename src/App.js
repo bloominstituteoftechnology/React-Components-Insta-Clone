@@ -21,10 +21,10 @@ const App = () => {
   const likePost = (postId) => {
       posts.map((post)=>{
         if(post.id === postId){
-          return ((...dummyData))
+          return (+1(...dummyData))
         }else post
       })
-    })
+    }
     /*
       This function serves the purpose of increasing the number of likes by one, of the post with a given id.
 
