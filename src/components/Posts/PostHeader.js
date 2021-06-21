@@ -4,6 +4,7 @@ import React from 'react';
 const PostHeader = props => {
   // 🔥 Make sure the parent of PostHeader is passing the right props!
   const { thumbnailUrl, username } = props;
+  console.log(props)
 
   return (
     <div className='post-header'>
