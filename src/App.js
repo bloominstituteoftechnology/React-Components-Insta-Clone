@@ -31,6 +31,18 @@ const App = () => {
     }))
   };
 
+  const newComment = (username, comment, postId) =>{
+    setPosts(
+      posts.map(post => {
+        if (post.id === postId){
+          post.comments.push({id:(post.comments[post.comments.length - 1].id + 1),username:username,text:comment})
+          return post
+        } else {
+          return post
+        }
+      })
+    )
+  }
   const filteredPosts = posts.filter(post => (
     post.username.toLowerCase().includes(searchTerm.toLowerCase())))
 
@@ -38,7 +50,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar searchTerm = {searchTerm} setSearchTerm = {setSearchTerm}/>
-      <Posts posts = {filteredPosts} likePost = {likePost}/>
+      <Posts posts = {filteredPosts} likePost = {likePost} newComment = {newComment}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );

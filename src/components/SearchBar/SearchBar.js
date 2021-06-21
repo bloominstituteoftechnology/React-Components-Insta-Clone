@@ -15,7 +15,12 @@ const SearchBar = ({searchTerm,setSearchTerm}) => {
         <input
           type="text"
           placeholder="Search"
-          onChange={e => setSearchTerm(e.target.value)}/>
+          onChange={e => setSearchTerm(e.target.value)}
+          onKeyDown={e=>{
+            if (e.keyCode === 13) {
+              e.preventDefault();
+              return false}
+            }}/>
       </form>
       <div className="social-wrapper">
         <div className="social">
