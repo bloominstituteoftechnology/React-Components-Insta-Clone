@@ -4,6 +4,7 @@ import './Posts.css';
 
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
+  //??? How can I check ???
   const { likePost, posts } = props;
 
   return (
