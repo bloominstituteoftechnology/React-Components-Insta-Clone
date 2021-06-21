@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import dummyData from '../../dummy-data';
 import Post from './Post';
 import './Posts.css';
 
@@ -10,6 +11,11 @@ const Posts = (props) => {
     <div className='posts-container-wrapper'>
       {/* Map through the posts array returning a Post component at each iteration */}
       {/* Check the implementation of Post to see what props it requires! */}
+
+      {dummyData.map((posts, item) => (<Post key={item} post={posts}></Post>))}
+        
+      
+
     </div>
   );
 };
