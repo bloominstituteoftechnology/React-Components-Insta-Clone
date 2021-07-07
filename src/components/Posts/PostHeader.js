@@ -1,3 +1,5 @@
+// Why not? if I need to fill props, shouldn't I need to import from App.jss
+
 // You do not need to change any code in this file
 import React from 'react';
 

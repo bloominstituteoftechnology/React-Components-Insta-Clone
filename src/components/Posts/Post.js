@@ -5,8 +5,7 @@ import PostHeader from './PostHeader';
 
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
-  const { post, likePost } = props;
-
+  const { ident, post, likes, likePost } = props;
   return (
     <div className='post-border'>
       <PostHeader
@@ -21,9 +20,9 @@ const Post = props => {
         />
       </div>
       {/* Is LikeSection getting all the props it needs to work correctly? */}
-      <LikeSection likePost={() => likePost(post.id)} />
+      <LikeSection variable={ident} post ={post} likePost={likePost} likes={post.likes}/>
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments comments={post.comments}/>
     </div>
   );
 };
