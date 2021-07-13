@@ -1,4 +1,15 @@
-# React-Components-Insta-Clone
+# React
+
+-Components-Insta-Clone
+
+- [React](#react)
+  - [Composing React Components and Passing Data Via Props](#composing-react-components-and-passing-data-via-props)
+  - [Introduction](#introduction)
+  - [Instructions](#instructions)
+    - [Task 1: Project Setup](#task-1-project-setup)
+    - [Task 2a: MVP](#task-2a-mvp)
+    - [Task 3: Stretch Goals](#task-3-stretch-goals)
+  - [Submission Format](#submission-format)
 
 ## Composing React Components and Passing Data Via Props
 
