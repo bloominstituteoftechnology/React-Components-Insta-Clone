@@ -42,4 +42,5 @@ const Post = props =>
   );
 };
 
+//Export statement
 export default Post;

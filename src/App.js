@@ -66,11 +66,11 @@ const App = () =>
       else { return post; }
     });
 
+    //Invoke setPosts
     setPosts(likeIncrementor);
-   
   };
     
-  
+  //Return function
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them 
