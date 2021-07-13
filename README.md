@@ -10,6 +10,7 @@
     - [Task 2a: MVP](#task-2a-mvp)
     - [Task 3: Stretch Goals](#task-3-stretch-goals)
   - [Submission Format](#submission-format)
+  - [Rick's Pull Request](#ricks-pull-request)
 
 ## Composing React Components and Passing Data Via Props
 
@@ -54,3 +55,7 @@ Your project should end up looking like [this](https://tk-assets.lambdaschool.co
 ## Submission Format
 
 - [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's Repo). **Please don't merge your own pull request**
+
+## Rick's Pull Request
+
+[Pull Request Link](https://github.com/LambdaSchool/React-Components-Insta-Clone/pull/342)
