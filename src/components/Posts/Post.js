@@ -1,8 +1,7 @@
-import React from 'react';
-import Comments from '../Comments/Comments';
+
 import LikeSection from './LikeSection';
 import PostHeader from './PostHeader';
-
+import React from 'react';
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
@@ -23,7 +22,7 @@ const Post = props => {
       {/* Is LikeSection getting all the props it needs to work correctly? */}
       <LikeSection likePost={() => likePost(post.id)} />
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments {...post} />
     </div>
   );
 };
