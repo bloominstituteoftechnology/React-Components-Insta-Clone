@@ -6,12 +6,13 @@ const Comment = props => {
   const { comment } = props;
 
   return (
-    <div>
-      {/* map through the comments prop and render a Comment for every piece of data */}
-      {comment.map(comment => {
-        return <Comment comment={comment} />
-      })}
+    <div className='comment-text'>
+      <span className='user'>{comment.username}</span>
+      {' '}
+      <span className='comment'>{comment.text}</span>
     </div>
   );
 };
+
+ 
 export default Comment;
