@@ -1,7 +1,6 @@
 import React from 'react';
 import Post from './Post';
 import './Posts.css';
-
 //Define the Posts function, pass in props
 const Posts = (props) => 
 {
