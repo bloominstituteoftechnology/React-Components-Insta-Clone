@@ -21,6 +21,7 @@ const App = () =>
 
     const [posts, setPosts] = useState(dummyData);
     const [searchTerm, setSearchTerm] = useState("");
+    const [initialPosts] = useState(dummyData);
 
     const likePost = (postId) =>
     {
@@ -40,10 +41,19 @@ const App = () =>
         {
             if (item.id === postId)
             {
-                // return { ...post, likes: post.likes + 1 };
-                const newPost = { ...item };
-                newPost.likes = item.likes + 1;
-                return newPost;
+                const initialPost = initialPosts.filter(p => p.id === postId);
+                const initialLikes = initialPost[0].likes;
+
+                if (initialLikes === item.likes)
+                {
+                    const newPost = { ...item };
+                    newPost.likes = item.likes + 1;
+                    return newPost;
+                }
+                else
+                {
+                    return item;
+                }
             }
             else
             {
