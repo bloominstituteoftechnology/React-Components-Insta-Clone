@@ -36,15 +36,18 @@ const App = () =>
             - otherwise just return the post object unchanged.
          */
 
-        const updatedPosts = posts.map(post =>
+        const updatedPosts = posts.map(item =>
         {
-            if (post.id === postId)
+            if (item.id === postId)
             {
-                return { ...post, likes: post.likes + 1 };
+                // return { ...post, likes: post.likes + 1 };
+                const newPost = { ...item };
+                newPost.likes = item.likes + 1;
+                return newPost;
             }
             else
             {
-                return post;
+                return item;
             }
         });
 
