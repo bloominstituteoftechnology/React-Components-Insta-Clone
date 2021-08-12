@@ -13,6 +13,8 @@ import Posts from './components/Posts/Posts';
 import SearchBar from './components/SearchBar/SearchBar';
 import dummyData from './dummy-data';
 
+dummyData.forEach(item => item.initialLikes = item.likes);
+
 const App = () =>
 {
     // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
@@ -20,8 +22,6 @@ const App = () =>
     // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
     const [posts, setPosts] = useState(dummyData);
-    const [searchTerm, setSearchTerm] = useState("");
-    const [initialPosts] = useState(dummyData);
 
     const likePost = (postId) =>
     {
@@ -41,10 +41,7 @@ const App = () =>
         {
             if (item.id === postId)
             {
-                const initialPost = initialPosts.filter(p => p.id === postId);
-                const initialLikes = initialPost[0].likes;
-
-                if (initialLikes === item.likes)
+                if (item.initialLikes === item.likes)
                 {
                     const newPost = { ...item };
                     newPost.likes = item.likes + 1;
