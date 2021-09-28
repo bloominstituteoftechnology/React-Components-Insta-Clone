@@ -1,43 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <meta charset="utf-8">
+    <meta charset="utf-8">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>instagram</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+  <title>Fun Bus Travel Agency</title>
+    <title>Fun Bus Travel Agency</title>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+  <link href="less/index.less" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Roboto" rel="stylesheet">
+    <link href="less/index.less" rel="stylesheet">
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <!-- If we omit the "defer" attribute, `index.js` will load and execute
+    <!- If we omit the "defer" attribute, `index.js` will load and execute
+  _before_ the rest of the HTML is parsed by the browser, which would be bad because
+  the code inside `index.js` expects the page to be fully parsed (and the DOM fully built) -->
+  <script defer src="js/index.js"></script>
+  <!-- We will often see script tags placed right before the closing body tag,
+    <script defer src="js/index.js"></script>
+    <!- We will often see script tags placed right before the closing body tag,
+  it's a way of getting around the problem above without the need for "defer" -->
+</head>
+
+<body>
+
+  <header class="main-navigation">
+    <div class="container nav-container">
+      <h1 class="logo-heading">Fun Bus</h1>
+      <nav class="nav">
+        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" href="#">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container home">
+    <header class="intro">
+      <img src="img/fun-bus.jpg" alt="bus in the sand">
+      <h2>Welcome To Fun Bus!</h2>
+      <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
+    <header class="main-navigation">
+        <div class="container nav-container">
+            <h1 class="logo-heading">Fun Bus</h1>
+            <nav class="nav">
+                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#">Blog</a>
+                <a class="nav-link" href="#">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section class="content-section">
+      <div class="text-content">
+        <h2>Let's Go!</h2>
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
+      </div>
+      <div class="img-content">
+        <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+      </div>
+    </section>
+    <section class="content-section inverse-content">
+      <div class="img-content">
+          <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
+      </div>
+      <div class="text-content">
+        <h2>Adventure Awaits</h2>
+        <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
+        <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
+      </div>
+
+    </section>
+    <section class="content-destination">
+      <h2>Pick Your Destination</h2>
+      <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+      <img src="img/destination.jpg" alt="Second slide">
+    </section>
+    <section class="content-pick">
+
+      <div class="destination">
+        <h4>Fun In The Sun</h4>
+        <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+        <div class="btn">Sign Me Up!</div>
+      </div>
+      <div class="destination">
+        <h4>Mountain Excursion</h4>
+        <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+        <div class="btn">Sign Me Up!</div>
+      </div>
+      <div class="destination">
+        <h4>Island Getaway</h4>
+        <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+        <div class="btn">Sign Me Up!</div>
+      </div>
+    </section>
+  </div><!-- container -->
+    <div class="container home">
+        <header class="intro">
+            <img id="funbus" src="img/fun-bus.jpg" alt="bus in the sand">
+            <h2>Welcome To Fun Bus!</h2>
+            <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty
+                design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme
+                travelblogger. Adventure fun traveler pretty design website expedition.</p>
+        </header>
+        <section class="content-section">
+            <div class="text-content">
+                <h2>Let's Go!</h2>
+                <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign
+                    adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
+                <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized
+                    website theme.</p>
+            </div>
+            <div class="img-content">
+                <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+            </div>
+        </section>
+        <section class="content-section inverse-content">
+            <div class="img-content">
+                <img src="img/fun.jpg" class="img-fluid rounded" alt="Lets have fun!">
+            </div>
+            <div class="text-content">
+                <h2>Adventure Awaits</h2>
+                <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign
+                    adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p>
+                <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized
+                    website theme.</p>
+            </div>
+
+        </section>
+        <section class="content-destination">
+            <h2>Pick Your Destination</h2>
+            <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful
+                webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+            <img src="img/destination.jpg" alt="Second slide">
+        </section>
+        <section class="content-pick">
+
+  <footer class="footer">
+    <p>Copyright Fun Bus 2020</p>
+  </footer>
+            <div class="destination">
+                <h4>Fun In The Sun</h4>
+                <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful
+                    webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+                <div class="btn">Sign Me Up!</div>
+            </div>
+            <div class="destination">
+                <h4>Mountain Excursion</h4>
+                <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful
+                    webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+                <div class="btn">Sign Me Up!</div>
+            </div>
+            <div class="destination">
+                <h4>Island Getaway</h4>
+                <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful
+                    webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+                <div class="btn">Sign Me Up!</div>
+            </div>
+        </section>
+    </div><!-- container -->
+
+    <footer class="footer">
+        <p>Copyright Fun Bus 2020</p>
+    </footer>
+
+</body>
 </html>
+
+</html> 
