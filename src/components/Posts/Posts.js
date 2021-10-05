@@ -4,7 +4,8 @@ import './Posts.css';
 
 const Posts = (props) => {
   // 🔥 Make sure the parent of Posts is passing the right props!
-  const { likePost, posts} = props;
+  const { likePost, posts, postId} = props;
+  console.log(posts);
 
   return (
     <div className='posts-container-wrapper'>
@@ -12,7 +13,7 @@ const Posts = (props) => {
       {/* Check the implementation of Post to see what props it requires! */}
       {
       posts.map(post =>
-        {return <Post post= {post} likePost = {likePost} />}
+        {return <Post post= {post} likePost = {likePost} id = {postId} />}
       )
       }
     </div>
