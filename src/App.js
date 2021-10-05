@@ -36,6 +36,14 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
     setPosts(posts.map(elem => elem.id === postId ? { ...elem, likes: elem.likes + 1} : elem));
+    // const updatedPosts = posts.map(elem => {
+    //   if (elem.id === postId) {
+    //     return { ...elem, likes: elem.likes + 1}
+    //   } else {
+    //     return elem;
+    //   }
+    // })
+    // setPosts(updatedPosts);
   };
 
   return (
