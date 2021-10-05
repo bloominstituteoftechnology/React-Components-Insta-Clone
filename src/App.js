@@ -7,9 +7,6 @@
 // Import the state hook
 import React, { useState} from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-import LikeSection from './components/Posts/LikeSection'
-import Post from './components/Posts/Post'
-import PostHeader from './components/Posts/PostHeader'
 import Posts from './components/Posts/Posts'
 import SearchBar from './components/SearchBar/SearchBar';
 
@@ -40,7 +37,9 @@ const App = () => {
         const newPost = posts.map(post => {
           if(post.id === postId){
             console.log(post.id);
-            return{...post, post: post.likes +1}
+            return{...post, likes: post.likes +1};
+          }else{
+            return post;
           }
         })
           setPosts(newPost); 
@@ -51,9 +50,6 @@ const App = () => {
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar />
       <Posts likePost={likePost} posts={posts}/>
-      
-
-      
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
