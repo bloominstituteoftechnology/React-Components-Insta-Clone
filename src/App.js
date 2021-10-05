@@ -34,8 +34,8 @@ const App = () => {
      */
     const upDatePost = posts.map(post => {
      if(post.id === postId){
-      const numberOfLikes = post.likes + 1;
-       return {...post, likes:numberOfLikes }
+      const newLikes = post.likes + 1;
+       return {...post, likes:newLikes }
      }
      else{
        return post;
