@@ -1,18 +1,21 @@
 // You do not need to change this file.
 import React from 'react';
+import Comment from './Comment';
 
-const Comment = props => {
-  // 🔥 Make sure the parent of Comment is passing the right props!
-  const { comment } = props;
+const Comments = props => {
+  // 🔥 Make sure the parent of Comments is passing the right props!
+  const { comments } = props;
+  
 
   return (
-    <div className='comment-text'>
-      <span className='user'>{comment.username}</span>
-      {' '}
-      <span className='comment'>{comment.text}</span>
+    <div>
+      {/* map through the comments prop and render a Comment for every piece of data */
+        comments.map((comment) => (
+          <Comment comment={comment} key={comment.id}/>
+        ))
+      }
     </div>
   );
 };
 
-
-export default Comment;
+export default Comments;
