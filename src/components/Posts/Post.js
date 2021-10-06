@@ -6,13 +6,12 @@ import PostHeader from './PostHeader';
 const Post = props => {
   // 🔥 Make sure the parent of Post is passing the right props!
   const { post, likePost } = props;
-
+  console.log(post);
   return (
     <div className='post-border'>
       <PostHeader
-        key={post.id} // ???? 
-        username={post.username}
-        thumbnailUrl={post.thumbnailUrl}
+        username = {post.username}
+        thumbnailUrl = {post.thumbnailUrl}
       />
       <div className='post-image-wrapper'>
         <img
