@@ -14,7 +14,7 @@ const Posts = (props) => {
       {posts.map(() => <div>{post}</div>)}
       {/* Check the implementation of Post to see what props it requires! */}
       <Posts posts={posts} likePost={likePost} />
-      <Post post={post} />
+      <Post post={post} likePost={likePost}/>
     </div>
   );
 };
