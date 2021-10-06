@@ -8,7 +8,6 @@
 import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 import Posts from './components/Posts/Posts'
-import Post from './components/Posts/Post'
 import SearchBar from './components/SearchBar/SearchBar';
 // Import the dummyData
 import dummyData from './dummy-data';
@@ -19,8 +18,7 @@ const App = () => {
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
 
-  const [posts, setPosts] = useState(dummyData)
-  const [state, setState] = useState('');
+  const [posts, setPosts] = useState(dummyData);
 
   const likePost = postId => {
     /*
@@ -52,7 +50,7 @@ const App = () => {
     <div className='App'>
       {/*  Add SearchBar and Posts here to render them */}
       <SearchBar />
-      <Posts likePost = {likePost} posts = {posts}/>
+      <Posts key = {posts.id} likePost = {likePost} posts = {posts} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );

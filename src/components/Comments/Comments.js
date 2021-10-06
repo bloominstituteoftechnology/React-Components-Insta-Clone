@@ -1,6 +1,4 @@
 import React from 'react';
-import Post from '../Posts/Post';
-// import Posts from './components/Posts/Posts'
 import Comment from './Comment';
 import './Comments.css';
 
