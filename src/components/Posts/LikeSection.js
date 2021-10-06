@@ -17,7 +17,7 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon onClick={likePost} icon={faHeart} />
+          <FontAwesomeIcon onClick={props.likePost} icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
@@ -29,3 +29,4 @@ const LikeSection = props => {
 };
 
 export default LikeSection;
+
