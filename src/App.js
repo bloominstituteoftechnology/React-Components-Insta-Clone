@@ -33,16 +33,16 @@ const App = () => {
         - otherwise just return the post object unchanged.
      */
 
-    // const newPosts = setPosts(posts.map(post => {
+    // const newNewPost = posts.map(post => {
     //   if (post.id === postId) {
     //     const newLikes = post.likes + 1;
     //     const newPost = { ...post, likes: newLikes };
     //     return newPost
     //   } else {
-    //     return post;
+    //     return post
     //   }
-    // }))
-    // setPosts(newPosts);
+    // })
+    // setPosts(newNewPost);
 
     //   const newPosts = (posts.map(post => {
     //     return post.id === postId ? { ...post, likes: post.Likes + 1 } : post;
@@ -65,7 +65,5 @@ const App = () => {
     </div>
   )
 }
-
-
 
 export default App;
