@@ -18,7 +18,9 @@ const App = () => {
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
   // To make the search bar work (which is stretch) we'd need another state to hold the search term.
   const [posts, setPosts] = useState(dummyData);
-  const [searchTerm, setSearchTerm] = useState("")
+  const [searchTerm, setSearchTerm] = useState("");
+  const [comment, setComment] = useState("");
+  
 
   const likePost = postId => {
     /*
@@ -36,7 +38,7 @@ const App = () => {
    
     const updatedLikes = posts.map(post => post.id === postId? {...post,likes: post.likes+1}:post)
     setPosts(updatedLikes)
-  };
+  }
   const filteredPost = () => {
     const normalize = searchTerm.trim().toLowerCase();
     if(!normalize){
@@ -44,13 +46,22 @@ const App = () => {
     } 
     return posts.filter(post => post.username.includes(searchTerm))
   }
+  const onChangeHandler = (event) => {
+    const value = event.target.value;
+   setComment(value);
+  }
+  const addComment = (postid) => {
+    const commentObj = {id:7,username: 'user',text:comment}
+    const newPosts = posts.map(post => post.id === postid? {...post,comments:[...post.comments,commentObj]}: post)
+    setPosts(newPosts)
+  }
 
   return (
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
       <SearchBar setSearchTerm = {setSearchTerm}/>
-      <Posts likePost = {likePost} posts = {filteredPost()}/>
+      <Posts likePost = {likePost} posts = {filteredPost()} onChangeHandler = {onChangeHandler} addComment = {addComment}/>
     </div>
   );
 };
