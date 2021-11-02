@@ -56,4 +56,13 @@ const dummyData = [
     },
 ];
 
+function App() {
+    const [points, setPoints] = useState(100)
+    return <Child action={amount => setPoints(points + amount)} />
+  }
+  function Child(props) {
+    return <button onClick={() => props.action(2)}>do it</button>
+  }
+  ReactDOM.render(<App />, root)
+
 export default dummyData;
