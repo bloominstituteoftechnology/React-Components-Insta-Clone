@@ -9,8 +9,9 @@ import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import './App.css';
-import './components/Posts/Posts.css'
-import './components/SearchBar/SearchBar.js'
+import Post from './components/Posts/Post';
+import Posts from './components/Posts/Posts.js'
+import SearchBar from './components/SearchBar/SearchBar.js'
 import dummyData from './dummy-data.js';
 
 const App = () => {
@@ -30,12 +31,23 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    setPosts(posts.map((posts.id === postId) ?  posts.likes = posts.likes + 1 : posts.likes = posts.likes + 0));
+    const updatedPosts = posts.map(post => {
+      if (post.id === postId){
+        return { ...post, likes: post.likes + 1}; /* ask about this ..., what is this doing if you're already iterating*/
+      }
+      else {
+        return post;
+      }
+    })
+    setPosts(updatedPosts);
   };
 
   return (
     <div className='App'>
-      {/* Add SearchBar and Posts here to render them */}
+      <SearchBar />
+      <Posts posts = {posts} likePost = {likePost} /> 
+      {/*render from green sending these things as props */}
+      {/* send into Posts, {posts} as posts and {likePost} as likePost*/}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
