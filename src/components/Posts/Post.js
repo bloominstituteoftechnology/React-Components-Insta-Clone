@@ -9,9 +9,9 @@ const Post = props => {
 
   return (
     <div className='post-border'>
-      <PostHeader 
-      username={post.username} 
-      thumbnailUrl={post.thumbnailUrl} 
+      <PostHeader
+        username={post.username}
+        thumbnailUrl={post.thumbnailUrl}
       />
       <div className='post-image-wrapper'>
         <img
