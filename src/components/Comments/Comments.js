@@ -9,6 +9,10 @@ const Comments = props => {
   return (
     <div>
       {/* map through the comments prop and render a Comment for every piece of data */}
+      {comments.map((comment, idx) => (
+        <Comment comment = {comment} key = {idx} />
+      ))}
+      {/*ask what is 'key', also sent into Post from Posts?*/}
     </div>
   );
 };
