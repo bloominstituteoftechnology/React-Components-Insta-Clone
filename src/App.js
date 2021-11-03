@@ -5,7 +5,7 @@
 */
 
 // Import the state hook
-import React, {Component, useState} from 'react';
+import React, {useState} from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData
 import './App.css';
@@ -39,7 +39,7 @@ const App = () => {
   return (
     <div className='App'>
       <SearchBar />
-      <Posts likes={likesPost} posts={posts} />
+      <Posts likes={likesPost} posts={posts}/>
     </div>
   );
 };
