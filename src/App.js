@@ -22,7 +22,7 @@ const [posts, setPosts] = useState(dummyData);
 
   const likePost = postId => {
     setPosts(posts.map(post => {
-      return posts.id === postId ? {...post, likes: post.likes++} : post;
+      return post.id === postId ? {...post, likes: post.likes + 1} : post;
     }))
   };
     /*
@@ -40,7 +40,7 @@ const [posts, setPosts] = useState(dummyData);
 
   return (
     <div className='App'>
-      {/* Add SearchBar and Posts here to render them */}
+      {/* ✅Add SearchBar and Posts here to render them */}
       <SearchBar/>
       <Posts likePost={likePost} posts={posts}/>
       {/* Check the implementation of each component, to see what props they require, if any! */}
