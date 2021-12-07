@@ -11,6 +11,7 @@ import Posts from './components/Posts/Posts'
 // Import the dummyData
 import DummyData from './dummy-data'
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
 
 const App = () => {
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
@@ -42,6 +43,7 @@ const newPosts = posts.map((post)  => {
 
   return (
     <div className='App'>
+      <SearchBar/>
       <Posts likePosts = {likePost} posts = {posts} key={posts.key} />
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
