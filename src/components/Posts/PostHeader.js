@@ -18,5 +18,5 @@ const PostHeader = props => {
     </div>
   );
 };
-
+console.log('I am PostHeader.js')
 export default PostHeader;

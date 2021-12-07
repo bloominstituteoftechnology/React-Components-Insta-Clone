@@ -31,5 +31,5 @@ const SearchBar = (props) => {
     </div>
   );
 };
-
+console.log('I am SearchBar.js')
 export default SearchBar;

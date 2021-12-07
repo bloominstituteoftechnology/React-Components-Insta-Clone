@@ -28,5 +28,5 @@ const App = () => {
     </div>
   );
 };
-console.log('I am App.js', dummyData)
+console.log('I am App.js')
 export default App;

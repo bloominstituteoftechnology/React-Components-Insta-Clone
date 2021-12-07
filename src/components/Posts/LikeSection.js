@@ -18,9 +18,9 @@ const LikeSection = props => {
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p onClick = {() => likePost()} className='like-number'>{numberOfLikes}</p>
+      <p onClick = {() => likePost()} className='like-number'>{numberOfLikes} likes</p>
     </div>
   );
 };
-
+console.log('I am LikeSection.js')
 export default LikeSection;
