@@ -1,7 +1,7 @@
 // You do not need to change this file.
 import React from 'react';
 
-const Comment = props => {
+const Comment = (props) => {
   // 🔥 Make sure the parent of Comment is passing the right props!
   const { comment } = props;
 
