@@ -19,7 +19,7 @@ const Post = (props) => {
         numberOfLikes={post.likes}
       />
       {/* Comments also wants its props! */}
-      <Comments />
+      <Comments comments={post.comments} />
     </div>
   );
 };
