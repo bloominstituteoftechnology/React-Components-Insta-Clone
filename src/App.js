@@ -12,7 +12,7 @@ const App = () => {
     setPosts(posts.map())
     const newLike = posts.map(post =>{
       if(postId === post.id){
-        return {...post, likes: post.likes+1 }
+        return {...post, likes: post.likes + 1 }
       } else {
         return post
       }
@@ -28,5 +28,4 @@ const App = () => {
     </div>
   );
 };
-console.log('I am App.js')
 export default App;

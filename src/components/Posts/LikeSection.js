@@ -5,6 +5,7 @@ import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
 
 const LikeSection = props => {
   const { likePost, numberOfLikes } = props;
+  console.log(likePost)
   return (
     <div>
       <div
@@ -12,15 +13,14 @@ const LikeSection = props => {
         key='likes-icons-container'
       >
         <div className='like-section-wrapper'>
-          <FontAwesomeIcon icon={faHeart} />
+          <FontAwesomeIcon icon={faHeart}/>
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p onClick = {() => likePost()} className='like-number'>{numberOfLikes} likes</p>
+      <p className='like-number'>{numberOfLikes} likes</p>
     </div>
   );
 };
-console.log('I am LikeSection.js')
 export default LikeSection;

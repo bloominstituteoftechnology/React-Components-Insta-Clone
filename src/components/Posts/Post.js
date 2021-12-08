@@ -24,5 +24,4 @@ const Post = props => {
     </div>
   );
 };
-console.log('I am Post.js')
 export default Post;

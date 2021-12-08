@@ -13,5 +13,4 @@ const Comments = props => {
     </div>
   );
 };
-console.log('I am Comments.js')
 export default Comments;
