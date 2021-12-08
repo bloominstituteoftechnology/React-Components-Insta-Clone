@@ -7,9 +7,9 @@
 // Import the state hook
 import React, { useState} from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-// Import the dummyData
 import Posts from './components/Posts/Posts';
 import SearchBar from './components/SearchBar/SearchBar';
+// Import the dummyData
 import dummyData from './dummy-data';
 import './App.css';
 
@@ -20,10 +20,10 @@ const App = () => {
   const likePost = postId => {
     const newPost = posts.map(post => {
         if(post.id === postId){
-          return {...posts, likes: post.likes + 1}
+          return {...post, likes: post.likes + 1};
         }
         else{
-          return posts
+          return post
         }
     });
     setPosts(newPost)
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      {<SearchBar/>}
+      {<SearchBar />}
       {<Posts posts={posts} likePost={likePost} />}
     </div>
   );
