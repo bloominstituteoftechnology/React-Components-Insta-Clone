@@ -8,8 +8,8 @@
 import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 // Import the dummyData 
-import { Post } from '../src/components/Posts/Post.js'
-import { Posts } from '../src/components/Posts/Posts.js'
+import Post from './components/Posts/Posts'
+import Posts from './components/Posts/Posts'
 import dummyData from './dummy-data';
 import { } from './App.css';
 
@@ -38,7 +38,7 @@ const App = () => {
 
   return (
     <div className='App'>
-      {/* Add SearchBar and Posts here to render them */}
+      {Posts}
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
