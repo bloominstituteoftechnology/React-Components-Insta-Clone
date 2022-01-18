@@ -8,6 +8,7 @@ const Comments = props => {
 
   return (
     <div>
+      {comments.map(comment => <Comment comment={comment}/> ) } 
       {/* map through the comments prop and render a Comment for every piece of data */}
     </div>
   );
