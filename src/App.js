@@ -34,8 +34,8 @@ const [posts,setPosts] = useState(dummyData)
     setPosts(posts = posts.map(cb => {
       if (id=postId){
         return ...Posts;
-      }else{
-        return Posts
+      };else{
+        return Posts;
       }
     }))
   };
