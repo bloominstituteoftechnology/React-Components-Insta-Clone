@@ -12,7 +12,7 @@
 
 ### Task 1: Project Setup
 
-This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
+This project was put together using create-react-app (CRA).  You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
 - [ ]  Create a forked copy of this project.
 - [ ]  Clone your OWN version of the repository in your terminal
