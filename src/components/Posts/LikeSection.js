@@ -10,7 +10,6 @@ import { useState } from 'react';
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
-  console.log(`likepost: ${likePost}`)
   let [hasLiked,toggleHasLiked] = useState(false); 
   return (
     <div>
