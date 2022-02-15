@@ -6,6 +6,7 @@ import { faHeart, faCircle, faCompass } from '@fortawesome/free-regular-svg-icon
 import "./SearchBar.css";
 
 const SearchBar = (props) => {
+  let {changeSearchInput} = props;
   return (
     <div className="search-bar-wrapper">
       <div className="social">
@@ -13,6 +14,7 @@ const SearchBar = (props) => {
       </div>
       <form className="search-form">
         <input
+          onChange={(event)=>changeSearchInput(event.target.value)}
           type="text"
           placeholder="Search"
         />

@@ -5,25 +5,26 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faComment, faHeart } from '@fortawesome/free-regular-svg-icons';
+import { useState } from 'react';
 
 const LikeSection = props => {
   // 🔥 Make sure the parent of LikeSection is passing the right props!
   const { likePost, numberOfLikes } = props;
-
+  let [hasLiked,toggleHasLiked] = useState(false); 
   return (
     <div>
       <div
         className='like-section'
         key='likes-icons-container'
-      >
-        <div className='like-section-wrapper'>
+      >               {/*If the user has already liked, subtract a like otherwise add a like*/}
+        <div onClick={()=>{likePost(hasLiked);toggleHasLiked(!hasLiked)}} className='like-section-wrapper'>
           <FontAwesomeIcon icon={faHeart} />
         </div>
         <div className='like-section-wrapper'>
           <FontAwesomeIcon icon={faComment} />
         </div>
       </div>
-      <p className='like-number'>100 likes</p>
+      <p className='like-number'>{numberOfLikes} likes</p>
     </div>
   );
 };
