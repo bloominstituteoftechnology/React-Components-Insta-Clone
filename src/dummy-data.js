@@ -54,6 +54,36 @@ const dummyData = [
             },
         ],
     },
+    {
+        id: 3,
+        username: "Esmodea",
+        thumbnailUrl: 'https://icon2.cleanpng.com/20180320/sqe/kisspng-twitch-computer-icons-streaming-media-youtube-live-tv-twitch-icon-5ab19172461392.001176751521586546287.jpg',
+        imageUrl: 'https://www.allarts.org/wp-content/uploads/2020/09/climate-clock-drone-shots01-Ben-Wolf-1.jpg',
+        likes: 607,
+        timestamp: "July 15th 2017, 03:12:09 pm",
+        comments: [
+            {
+                id: 36,
+                username: "twitch",
+                text: "The world is gonna end?!?",
+            },
+            {
+                id: 37,
+                username: "someoneElse",
+                text: "Omg that's so crazy terrifying",
+            },
+            {
+                id: 38,
+                username: "themexican_leprechaun",
+                text: "What a setup",
+            },
+            {
+                id: 39,
+                username: "dennis_futbol",
+                text: "Wow.",
+            },
+        ],
+    },
 ];
 
 export default dummyData;
