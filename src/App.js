@@ -42,7 +42,7 @@ const App = () => {
 
   const searchChange = (term)=>{
     if(term){
-      setSearch(term);
+      setSearch(term.toLowerCase());
     }else{
       setSearch(null);
     }
