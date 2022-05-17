@@ -8,6 +8,7 @@
 import React, { useState } from 'react';
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
 import Posts from './components/Posts/Posts.js';
+import SearchBar from './components/SearchBar/SearchBar.js';
 // Import the dummyData
 import dummyData from './dummy-data.js';
 import './App.css';
@@ -43,6 +44,7 @@ const App = () => {
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       {/* Check the implementation of each component, to see what props they require, if any! */}
+      <SearchBar />
       <Posts posts={posts} likePost={likePost} />
     </div>
   );
