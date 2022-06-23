@@ -14,12 +14,12 @@
 
 This project was put together using create-react-app (CRA). You will not need to install CRA in order to make this project work. Follow the steps below to setup the project with the proper dependencies.
 
-- [ ]  Create a forked copy of this project.
-- [ ]  Clone your OWN version of the repository in your terminal
-- [ ]  CD into the project base directory `cd React-Components-Insta-Clone`
-- [ ]  Download project dependencies by running `npm install`
-- [ ]  Start up the app using `npm start`
-- [ ]  Push commits: git push origin `main`.
+- [ X ]  Create a forked copy of this project.
+- [ X ]  Clone your OWN version of the repository in your terminal
+- [ X ]  CD into the project base directory `cd React-Components-Insta-Clone`
+- [ X ]  Download project dependencies by running `npm install`
+- [ X ]  Start up the app using `npm start`
+- [ x ]  Push commits: git push origin `main`.
 
 ### Task 2a: MVP
 
