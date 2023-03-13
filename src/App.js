@@ -5,7 +5,7 @@
 */
 
 // Import the state hook
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Posts from './components/Posts/Posts';
 import SearchBar from './components/SearchBar/SearchBar'
 import dummyData from './dummy-data'
@@ -15,6 +15,7 @@ import './App.css';
 
 const App = () => {
   const [posts, setPosts] = useState(dummyData)
+  const [search, setSearch] = useState("")
   // console.log(posts[2].id)
   // Create a state called `posts` to hold the array of post objects, **initializing to dummyData**.
   // This state is the source of truth for the data inside the app. You won't be needing dummyData anymore.
@@ -32,18 +33,29 @@ const App = () => {
         - if the `id` of the post matches `postId`, return a new post object with the desired values (use the spread operator).
         - otherwise just return the post object unchanged.
      */
-    setPosts(posts.map((e,i)=>{if (e[i].id === postId) return e }))
+    
+      const updatedPosts = posts.map(post => {
+        if (post.id === post.id) {
+          return {...post, likes: post.likes + 1};
+      }
+    else {
+          return post;
+        }
+      }
+      )
+      setPosts(updatedPosts)
 
+   
   };
 
-  return (
-    <div className='App'>
-      <SearchBar/>
-      <Posts/>
-      {/* Add SearchBar and Posts here to render them */}
-      {/* Check the implementation of each component, to see what props they require, if any! */}
-    </div>
-  );
+return (
+  <div className='App'>
+    <SearchBar />
+    <Posts posts={posts} likePost={likePost} />
+    {/* Add SearchBar and Posts here to render them */}
+    {/* Check the implementation of each component, to see what props they require, if any! */}
+  </div>
+);
 };
 
 export default App;
