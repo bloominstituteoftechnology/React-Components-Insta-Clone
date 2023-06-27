@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Titillium Web';
+  src: url('../fonts/TitilliumWeb-SemiBold.ttf');
+}
+
+body {
+  font-family: 'Titillium Web', sans-serif;
+  border: 1rem solid #ff4b00;
+  display: flex;
+  flex-direction: column;
+}
+
+h1,
+h2 {
+  color: #93005a;
+}
+
+#root {
+  width: 100%;
+  overflow-y: auto;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.comments-wrapper {
+  padding: 10px;
+}
+
+.comment-text {
+  text-align: left;
+  padding: 2px;
+  margin-left: 4px;
+  margin-bottom: 4px;
+}
+
+.user {
+  font-size: 14px;
+}
+
+.posts-container-wrapper {
+  height: 50%;
+  width: 33%;
+  min-width: 400px;
+  margin: 5px auto;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-header h2 {
+  font-size: 14px;
+}
+
+.post-border {
+  border: 1px solid #d3d3d3;
+  margin: 15px 0;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.post-header {
+  display: flex;
+}
+
+.post-thumb-wrapper {
+  height: 50px;
+  width: 50px;
+}
+
+.post-thumb {
+  height: 80%;
+  margin: 5px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.like-section {
+  display: flex;
+}
+
+.like-section-wrapper {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+.like-section-wrapper:nth-child(1) {
+  cursor: pointer;
+}
+
+.like-number {
+  width: 100px;
+  margin: 15px 0px;
+}
+
+.search-bar-wrapper {
+  border-bottom: 1px solid #3333;
+  height: 60px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: #ffffff;
+}
+
+.search-form {
+  font-size: 14px;
+}
+
+.search-form input {
+  text-align: center;
+  color: #262626;
+  width: 150px;
+}
+
+.social-wrapper {
+  display: flex;
+}
+
+.social {
+  width: 50px;
+}
