@@ -4,16 +4,13 @@
 
 ## Introduction
 
-- For this project, you'll be building a simple Instagram clone using React.
-- There is a file provided `frontend/data/dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post.
-- Your React application will receive faux post data and render each as a separate Instagram post.
+For this project, you'll be building a simple Instagram clone using React. There is a file provided `frontend/data/dummy-data.js` that contains some mock data. Each object in the mock data represents a faux Instagram post. Your React application will receive faux post data and render each as a separate Instagram post.
 
 ## Instructions
 
 ### Task 1: Project Setup
 
-- [ ]  Create a forked copy of this project.
-- [ ]  Clone your OWN version of the repository in your terminal
+- [ ] Clone the repository to your machine using your terminal.
 - [ ]  CD into the project base directory `cd React-Components-Insta-Clone`
 - [ ]  Download project dependencies by running `npm install`
 - [ ]  Start up the app using `npm run dev`
